@@ -2,28 +2,28 @@ import React from 'react'
 
 const NavigationDropdownMenu = () => {
   return (
-    <nav id="navigation" class="main-navigation dropdown">
-      <ul id="nav_list" class="top-level-nav">
+    <nav id="navigation" className="main-navigation dropdown">
+      <ul id="nav_list" className="top-level-nav">
 
-        <li class="nav-item">
-          <a href="/getting-started.html" class="first-level-link">Getting Started</a>
-          <div class="sub-nav">
+        <li className="nav-item">
+          <a href="/getting-started.html" className="first-level-link">Getting Started</a>
+          <div className="sub-nav">
 
-            <ul class="second-level-nav">
-              <li class="unit1">
-                <a href="/getting-started.html" class="second-level-link">Getting Started</a>
+            <ul className="second-level-nav">
+              <li className="unit1">
+                <a href="/getting-started.html" className="second-level-link">Getting Started</a>
               </li>
-              <li class="unit1">
-                <a href="/updates.html" class="second-level-link">Update</a>
+              <li className="unit1">
+                <a href="/updates.html" className="second-level-link">Update</a>
               </li>
-              <li class="unit1">
-                <a href="/cdn.html" class="second-level-link">CDN</a>
+              <li className="unit1">
+                <a href="/cdn.html" className="second-level-link">CDN</a>
               </li>
-              <li class="unit1">
-                <a href="/structure.html" class="second-level-link">Structure</a>
+              <li className="unit1">
+                <a href="/structure.html" className="second-level-link">Structure</a>
               </li>
-              <li class="unit1">
-                <a href="/https://github.com/Office-of-Digital-Innovation/California-State-Template" class="second-level-link"
+              <li className="unit1">
+                <a href="/https://github.com/Office-of-Digital-Innovation/California-State-Template" className="second-level-link"
                   target="_blank">Download</a>
               </li>
             </ul>
@@ -32,54 +32,54 @@ const NavigationDropdownMenu = () => {
         </li>
 
 
-        <li class="nav-item">
-          <a href="/visual-design.html" class="first-level-link">Visual Design</a>
-          <div class="sub-nav">
+        <li className="nav-item">
+          <a href="/visual-design.html" className="first-level-link">Visual Design</a>
+          <div className="sub-nav">
 
-            <ul class="second-level-nav">
-              <li class="unit1">
-                <a href="/visual-design/typography.html" class="second-level-link">Typography</a>
+            <ul className="second-level-nav">
+              <li className="unit1">
+                <a href="/visual-design/typography.html" className="second-level-link">Typography</a>
               </li>
-              <li class="unit1">
-                <a href="/visual-design/color-schemes.html" class="second-level-link">Color Schemes</a>
+              <li className="unit1">
+                <a href="/visual-design/color-schemes.html" className="second-level-link">Color Schemes</a>
               </li>
-              <li class="unit1">
-                <a href="/visual-design/icon-fonts.html" class="second-level-link">Icons</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-
-        <li class="nav-item">
-          <a href="/" class="first-level-link">Components</a>
-          <div class="sub-nav">
-
-            <ul class="second-level-nav">
-              <li class="unit1">
-                <a href="/components.html" class="second-level-link">Components</a>
-              </li>
-              <li class="unit1">
-                <a href="/structure/site-navigation.html" class="second-level-link">Navigation</a>
-              </li>
-              <li class="unit1">
-                <a href="/css-shortcuts/css-units.html" class="second-level-link">CSS shortcuts</a>
+              <li className="unit1">
+                <a href="/visual-design/icon-fonts.html" className="second-level-link">Icons</a>
               </li>
             </ul>
           </div>
         </li>
 
 
-        <li class="nav-item">
-          <a href="/patterns.html" class="first-level-link">Patterns</a>
-          <div class="sub-nav">
-            <ul class="second-level-nav">
-              <li class="unit1">
-                <a href="/patterns.html" class="second-level-link"><span class="ca-gov-icon-apps"
+        <li className="nav-item">
+          <a href="/" className="first-level-link">Components</a>
+          <div className="sub-nav">
+
+            <ul className="second-level-nav">
+              <li className="unit1">
+                <a href="/components.html" className="second-level-link">Components</a>
+              </li>
+              <li className="unit1">
+                <a href="/structure/site-navigation.html" className="second-level-link">Navigation</a>
+              </li>
+              <li className="unit1">
+                <a href="/css-shortcuts/css-units.html" className="second-level-link">CSS shortcuts</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+
+        <li className="nav-item">
+          <a href="/patterns.html" className="first-level-link">Patterns</a>
+          <div className="sub-nav">
+            <ul className="second-level-nav">
+              <li className="unit1">
+                <a href="/patterns.html" className="second-level-link"><span className="ca-gov-icon-apps"
                   aria-hidden="true"></span>Content patterns</a>
               </li>
-              <li class="unit1">
-                <a href="/structure/layouts.html" class="second-level-link"><span class="ca-gov-icon-desktop-checklist"
+              <li className="unit1">
+                <a href="/structure/layouts.html" className="second-level-link"><span className="ca-gov-icon-desktop-checklist"
                   aria-hidden="true"></span>Page layouts</a>
               </li>
             </ul>
@@ -88,16 +88,16 @@ const NavigationDropdownMenu = () => {
 
 
 
-        <li class="nav-item">
-          <a href="/about.html" class="first-level-link">About</a>
-          <div class="sub-nav">
-            <ul class="second-level-nav">
-              <li class="unit1">
-                <a href="/about.html" class="second-level-link"><span class="ca-gov-icon-thumb-up"
+        <li className="nav-item">
+          <a href="/about.html" className="first-level-link">About</a>
+          <div className="sub-nav">
+            <ul className="second-level-nav">
+              <li className="unit1">
+                <a href="/about.html" className="second-level-link"><span className="ca-gov-icon-thumb-up"
                   aria-hidden="true"></span>About</a>
               </li>
-              <li class="unit1">
-                <a href="https://webstandards.ca.gov/" class="second-level-link"><span class="ca-gov-icon-gear"
+              <li className="unit1">
+                <a href="https://webstandards.ca.gov/" className="second-level-link"><span className="ca-gov-icon-gear"
                   aria-hidden="true"></span>Web Standards</a>
               </li>
             </ul>

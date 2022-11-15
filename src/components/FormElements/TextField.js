@@ -3,7 +3,7 @@ import React from 'react'
 const TextField = ({ id, placeholder, labelText, isRequired }) => {
   return (
     <>
-      <label className={'form-control-label'} for={id}>
+      <label className={'form-control-label'} htmlFor={id}>
         {isRequired ? <span className={'required-label'}>*</span> : null}
         {labelText}
       </label>

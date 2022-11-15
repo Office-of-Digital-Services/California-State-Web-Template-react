@@ -5,13 +5,9 @@ import featureBannerImage from './patterns/Banner/ocean.jpg';
 import cardImage from './patterns/Card/card-image.jpg';
 
 // Components
-import BasicAccordion from './components/Accordion/BasicAccordion';
-import AccordionList from './components/Accordion/AccordionList';
+import Accordion from './components/Accordion/Accordion';
 import Alert from './components/Alert/Alert';
-import BasicBlockquote from './components/Blockquote/BasicBlockquote';
-import BlockquoteWithImage from './components/Blockquote/BlockquoteWithImage';
-import PullQuote from './components/Blockquote/PullQuote';
-import ProminentBlockquote from './components/Blockquote/ProminentBlockquote';
+import Blockquote from './components/Blockquote/Blockquote';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CountdownTimer from './components/CountdownTimer/CountdownTimer';
@@ -22,13 +18,13 @@ import RadioButton from './components/FormElements/RadioButton';
 import DropdownMenu from './components/FormElements/DropdownMenu';
 import FileInput from './components/FormElements/FileInput';
 import HorizontalSeparator from './components/HorizontalSeparator/HorizontalSeparator';
-import UnorderedList from './components/Lists/UnorderedList';
-import OrderedList from './components/Lists/OrderedList';
+import Lists from './components/Lists/Lists';
 import Modal from './components/Modal/Modal';
 import NumberCounter from './components/NumberCounter/NumberCounter';
 import Parallax from './components/Parallax/Parallax';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import SocialMediaIcons from './components/SocialMediaIcons/SocialMediaIcons';
+import Table from './components/Table/Table';
 import BasicTable from './components/Table/BasicTable';
 import ShadedTable from './components/Table/ShadedTable';
 import ZebraTable from './components/Table/ZebraTable';
@@ -60,19 +56,24 @@ import Footer from './structure/Footer/Footer';
 import GradientBackgrounds from './get-started/GradientBackgrounds/GradientBackgrounds';
 import TextAccentColors from './get-started/TextAccentColors/TextAccentColors';
 
+import './js/cagov/tabs';
+
 function App() {
   return (
     <>
       <h1>Components</h1>
       <h2>Accordion</h2>
       <div>
-        <BasicAccordion
+        <h3>Basic Accordion</h3>
+        <Accordion
           summaryStr={'Here is a summary'}
           bodyArr={['Here is some text for body #1', 'Here is more text for another paragraph']}
         />
       </div>
       <div>
-        <AccordionList
+        <h3>Accordion List</h3>
+        <Accordion
+          type={'list'}
           contentObj={[{
             heading: 'Item 1',
             content: 'Content for item 1'
@@ -119,32 +120,42 @@ function App() {
       <hr />
       <h2>Blockquote</h2>
       <div>
-        <BasicBlockquote withGraphic={true} />
-      </div>
-      <div>
-        <BlockquoteWithImage
-          altStr={'Person\'s face'}
-          quoteStr={'You can pair a block quote with the image of related content or the author of the quote. '}
-          footerStr={'Author'}
-          imageSrc={testAvatar}
+        <h3>Basic Blockquote</h3>
+        <h4>With graphic</h4>
+        <Blockquote
           withGraphic={true}
+          quote={'Good quotes help to tell a story and enhance the credibility of a press release, news story, or speech. Words that are crafted well can leave a lasting impact on the world.'}
+          author={'Holly Zuluaga'}
         />
-      </div>
-      <div>
-        <PullQuote
-          quoteStr={'Good quotes help to tell a story and enhance the credibility of a press release, news story, or speech. Words that are crafted well can leave a lasting impact on the world.'}
-          footerStr={'Holly Zuluaga'}
+        <h4>Without graphic</h4>
+        <Blockquote
+          withGraphic={false}
+          quote={'Good quotes help to tell a story and enhance the credibility of a press release, news story, or speech. Words that are crafted well can leave a lasting impact on the world.'}
+          author={'Holly Zuluaga'}
         />
-      </div>
-      <div>
-        <ProminentBlockquote
-          quoteStr={'Good quotes help to tell a story and enhance the credibility of a press release, news story, or speech. Words that are crafted well can leave a lasting impact on the world.'}
-          footerStr={'Holly Zuluaga'}
+        <h3>Blockquote with Image</h3>
+        <Blockquote
+          imageSrc={testAvatar}
+          altText={'Person\'s face'}
+          quote={'You can pair a block quote with the image of related content or the author of the quote.'}
+          author={'Author'}
+        />
+        <h3>Pull Quote</h3>
+        <Blockquote
+          withPulledQuote={true}
+          quote={'Good quotes help to tell a story and enhance the credibility of a press release, news story, or speech. Words that are crafted well can leave a lasting impact on the world.'}
+          author={'Holly Zuluaga'}
+        />
+        <h3>Prominent Blockquote</h3>
+        <Blockquote
+          isProminent={true}
+          quote={'Good quotes help to tell a story and enhance the credibility of a press release, news story, or speech. Words that are crafted well can leave a lasting impact on the world.'}
+          author={'Holly Zuluaga'}
         />
       </div>
       <hr />
+      <h2>Breadcrumb</h2>
       <div>
-        <h2>Breadcrumb</h2>
         <Breadcrumb
           breadcrumbArr={[
             {
@@ -160,9 +171,9 @@ function App() {
         />
       </div>
       <hr />
+      <h2>Button</h2>
       <div>
-        <h2>Button</h2>
-        <div class="btn-row p-b">
+        <div className="btn-row p-b">
           <Button
             buttonText={'Primary color'}
             buttonType={'primary'}
@@ -176,7 +187,7 @@ function App() {
             buttonType={'standout'}
           />
         </div>
-        <div class="btn-row p-b">
+        <div className="btn-row p-b">
           <Button
             buttonText={'Primary color'}
             buttonType={'outline-primary'}
@@ -193,7 +204,7 @@ function App() {
             href={'#'}
           />
         </div>
-        <div class="btn-row p-b">
+        <div className="btn-row p-b">
           <Button
             buttonText={'Primary color'}
             buttonType={'outline-primary'}
@@ -213,7 +224,7 @@ function App() {
             disabled={true}
           />
         </div>
-        <div class="btn-row m-b-lg">
+        <div className="btn-row m-b-lg">
           <Button
             buttonSize={'lg'}
             buttonText={'large'}
@@ -240,16 +251,16 @@ function App() {
         </div>
       </div>
       <hr />
+      <h2>Countdown Timer</h2>
       <div>
-        <h2>Countdown Timer</h2>
         <CountdownTimer
           dateStr={'Jan 1, 2023 00:00:00'}
           isDefaultColor={false}
         />
       </div>
       <hr />
+      <h2>Form Elements</h2>
       <div>
-        <h2>Form Elements</h2>
         <form action="">
           <TextField id={'InputName'} placeholder={'Name'} labelText={'Full Name'} isRequired={false} />
           <TextArea
@@ -303,23 +314,28 @@ function App() {
           />
         </form>
       </div>
+      <h2>Horizontal Separator</h2>
       <div>
-        <h2>Horizontal Separator</h2>
         <p>Default</p>
         <HorizontalSeparator />
         <p>Dotted</p>
         <HorizontalSeparator isDotted={true} />
       </div>
       <hr />
+      <h2>Lists</h2>
       <div>
-        <h2>Lists</h2>
-        <UnorderedList itemsArr={['List your first unrelated item here.', 'Continue your list of unrelated items.', 'Continue your list of unrelated items.']} />
-        <OrderedList itemsArr={['List step 1 of your process.', 'List the second step of your process.', 'List the third step of your process.']} />
+        <Lists
+          itemsArr={['List your first unrelated item here.', 'Continue your list of unrelated items.', 'Continue your list of unrelated items.']}
+        />
+        <Lists
+          type={'ordered'}
+          itemsArr={['List step 1 of your process.', 'List the second step of your process.', 'List the third step of your process.']}
+        />
       </div>
       <hr />
       <div>
         <h2>Modal</h2>
-        <button type="button" class="btn btn-default btn-lg m-t-lg" data-bs-toggle="modal" data-bs-target="#modal">Open modal</button>
+        <button type="button" className="btn btn-default btn-lg m-t-lg" data-bs-toggle="modal" data-bs-target="#modal">Open modal</button>
         <Modal headingText={'This is the modal container\'s heading'} bodyText={'This is the modal container\'s body'} />
       </div>
       <hr />
@@ -340,14 +356,56 @@ function App() {
       <hr />
       <div>
         <h2>Social Media Icons</h2>
-        <SocialMediaIcons />
+        <SocialMediaIcons
+          contentArr={[
+            {
+              type: 'facebook',
+              href: 'https://www.facebook.com/'
+            },
+            {
+              type: 'github',
+              href: 'https://www.github.com/'
+            },
+            {
+              type: 'twitter',
+              href: 'https://www.twitter.com/'
+            },
+            {
+              type: 'youtube',
+              href: 'https://www.youtube.com/'
+            },
+            {
+              type: 'linkedin',
+              href: 'https://www.linkedin.com/'
+            },
+            {
+              type: 'instagram',
+              href: 'https://www.instagram.com/'
+            },
+            {
+              type: 'email',
+              href: 'mailto:your_email@ca.gov'
+            }
+          ]}
+        />
       </div>
       <hr />
       <div>
         <h2>Table</h2>
-        <BasicTable />
-        <ShadedTable />
-        <ZebraTable />
+        <Table
+          headerArr={['#', 'First Name', 'Last Name', 'Username']}
+          rowArr={[['1', 'Mark', 'Otto', '@mdo'], ['2', 'Jacob', 'Thornton', '@jthornton'], ['3', 'Larry', 'the Bird', '@twitter']]}
+        />
+        <Table
+          type={'shaded'}
+          headerArr={['#', 'First Name', 'Last Name', 'Username']}
+          rowArr={[['1', 'Mark', 'Otto', '@mdo'], ['2', 'Jacob', 'Thornton', '@jthornton'], ['3', 'Larry', 'the Bird', '@twitter']]}
+        />
+        <Table
+          type={'zebra'}
+          headerArr={['#', 'First Name', 'Last Name', 'Username']}
+          rowArr={[['1', 'Mark', 'Otto', '@mdo'], ['2', 'Jacob', 'Thornton', '@jthornton'], ['3', 'Larry', 'the Bird', '@twitter']]}
+        />
       </div>
       <hr />
       <div>

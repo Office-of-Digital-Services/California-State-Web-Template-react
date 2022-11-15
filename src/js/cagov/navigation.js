@@ -529,7 +529,7 @@ function NavReset() {
     // // $(".first-level-btn").attr("aria-selected", "false");
     //$(".sub-nav").attr("aria-hidden", "true").removeClass("open");
     //$(".second-level-link").attr("tabindex", "-1");
-    //var toggleSubNav = $('<div class="ca-gov-icon-caret-right rotate" aria-hidden="true"></div>');
+    //var toggleSubNav = $('<div className="ca-gov-icon-caret-right rotate" aria-hidden="true"></div>');
 
     //if (window.innerWidth <= 991) {
     //    //$('.has-sub').append(toggleSubNav);
@@ -699,8 +699,8 @@ AlmostJQueryDocumentReady(function () { //JS
             addClass(el, "has-sub"); //JS
 
             //JQ
-            //var carrot = $('<span class="ca-gov-icon-triangle-down carrot" aria-hidden="true"></span>');
-            //var toggleSubNav = $('<div class="ca-gov-icon-caret-right rotate" aria-hidden="true"></div>');
+            //var carrot = $('<span className="ca-gov-icon-triangle-down carrot" aria-hidden="true"></span>');
+            //var toggleSubNav = $('<div className="ca-gov-icon-caret-right rotate" aria-hidden="true"></div>');
 
             //if (mobileView()) {
             //    toggleSubNav.css("display", "block");

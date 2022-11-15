@@ -3,15 +3,15 @@ import Logo from './template-logo.png';
 
 const SiteHeader = ({ stateText, departmentText }) => {
   return (
-    <div class="section-default">
-      <div class="branding">
-        <div class="header-organization-banner">
+    <div className="section-default">
+      <div className="branding">
+        <div className="header-organization-banner">
           <a href="/">
-            <div class="logo-assets">
-              <img src={Logo} class="logo-img" alt="State Template Logo" />
-              <div class="logo-text">
-                <span class="logo-state">{stateText}</span>
-                <span class="logo-dept">{departmentText}</span>
+            <div className="logo-assets">
+              <img src={Logo} className="logo-img" alt="State Template Logo" />
+              <div className="logo-text">
+                <span className="logo-state">{stateText}</span>
+                <span className="logo-dept">{departmentText}</span>
               </div>
             </div>
           </a>
