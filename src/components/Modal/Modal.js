@@ -2,7 +2,7 @@ import React from 'react'
 
 const Modal = ({ headingText, bodyText }) => {
   return (
-    <div className='modal fade' id='modal' role='dialog' tabindex='-1'>
+    <div className='modal fade' id='modal' role='dialog' tabIndex='-1'>
       <div className='modal-dialog modal-lg'>
         <div className='modal-content'>
           <div className='modal-header'>

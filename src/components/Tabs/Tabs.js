@@ -1,39 +1,18 @@
 import React from 'react';
 import '../../js/cagov/tabs';
 
-const Tabs = () => {
+const Tabs = ({ headerArr, sectionArr }) => {
   return (
     <div className='tabs'>
       <ul role={'tablist'}>
-        <li role={'presentation'}>
-          <a href='#section1' role={'tab'}>Tab 1</a>
-        </li>
-        <li role={'presentation'}>
-          <a href='#section2' role={'tab'}>Tab 2</a>
-        </li>
-        <li role={'presentation'}>
-          <a href='#section3' role={'tab'}>Tab 3</a>
-        </li>
-        <li role={'presentation'}>
-          <a href='#section4' role={'tab'}>Tab 4</a>
-        </li>
+        {headerArr.map((item, idx) => <li role={'presentation'} key={`t-li-item${idx}`}><a href={`#section${idx + 1}`} role={'tab'}>{item}</a></li>)}
       </ul>
-      <section id='section1' role={'tabpanel'} tabIndex={'-1'}>
-        <h3 className='m-t-0'>Tab 1 headline</h3>
-        <p>This is tab 1 body text.</p>
-      </section>
-      <section id='section2' role={'tabpanel'} tabIndex={'-1'}>
-        <h3 className='m-t-0'>Tab 2 headline</h3>
-        <p>This is tab 2 body text.</p>
-      </section>
-      <section id='section3' role={'tabpanel'} tabIndex={'-1'}>
-        <h3 className='m-t-0'>Tab 3 headline</h3>
-        <p>This is tab 3 body text.</p>
-      </section>
-      <section id='section4' role={'tabpanel'} tabIndex={'-1'}>
-        <h3 className='m-t-0'>Tab 4 headline</h3>
-        <p>This is tab 4 body text.</p>
-      </section>
+      {sectionArr.map((item, idx) => (
+        <section key={`t-section-item${idx}`} id={`section${idx + 1}`} role={'tabpanel'} tabIndex={'-1'}>
+          <h3 className='m-t-0'>{item.headline}</h3>
+          <p>{item.text}</p>
+        </section>
+      ))}
     </div>
   )
 }

@@ -3,6 +3,12 @@ import testAvatar from './components/Blockquote/blockquote-with-image.jpg';
 import bannerImage from './patterns/Banner/main-banner10.jpg';
 import featureBannerImage from './patterns/Banner/ocean.jpg';
 import cardImage from './patterns/Card/card-image.jpg';
+import parallaxImage1 from './components/Parallax/background-primary.jpg';
+import parallaxImage2 from './components/Parallax/bg-open-data.jpg';
+import parallaxImage3 from './components/Parallax/main-banner4.jpg';
+
+// JSON for component props
+// import alertData from './exampleData/alertProps.json';
 
 // Components
 import Accordion from './components/Accordion/Accordion';
@@ -25,9 +31,6 @@ import Parallax from './components/Parallax/Parallax';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import SocialMediaIcons from './components/SocialMediaIcons/SocialMediaIcons';
 import Table from './components/Table/Table';
-import BasicTable from './components/Table/BasicTable';
-import ShadedTable from './components/Table/ShadedTable';
-import ZebraTable from './components/Table/ZebraTable';
 import Tabs from './components/Tabs/Tabs';
 
 // Patterns
@@ -346,12 +349,43 @@ function App() {
       <hr />
       <div>
         <h2>Parallax</h2>
-        <Parallax />
+        <Parallax
+          contentObj={
+            {
+              imageSrc: parallaxImage1,
+              heightInPx: '300',
+              centerText: 'SCROLL DOWN',
+              hasLightTextColor: false
+            }
+          }
+        />
+        <Parallax
+          contentObj={
+            {
+              imageSrc: parallaxImage2,
+              heightInPx: '300',
+              headingText: 'Parallax Height',
+              bodyText: 'Height can be specified by adding heightInPx prop, such as heightInPx: 300',
+              hasLightTextColor: false
+            }
+          }
+        />
+        <Parallax
+          contentObj={
+            {
+              imageSrc: parallaxImage3,
+              heightInPx: '300',
+              headingText: 'Light text color',
+              bodyText: 'Make light text on dark backgrounds by changing the hasLightTextColor prop value to true',
+              hasLightTextColor: true
+            }
+          }
+        />
       </div>
       <hr />
       <div>
         <h2>Progress Bar</h2>
-        <ProgressBar percentComplete={98} />
+        <ProgressBar percentComplete={50} />
       </div>
       <hr />
       <div>
@@ -410,7 +444,17 @@ function App() {
       <hr />
       <div>
         <h2>Tabs</h2>
-        <Tabs />
+        <Tabs
+          headerArr={['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4']}
+          sectionArr={
+            [
+              { headline: 'Tab 1 headline', text: 'This is tab 1 body text' },
+              { headline: 'Tab 2 headline', text: 'This is tab 2 body text' },
+              { headline: 'Tab 3 headline', text: 'This is tab 3 body text' },
+              { headline: 'Tab 4 headline', text: 'This is tab 4 body text' }
+            ]
+          }
+        />
       </div>
       <hr />
       <div>

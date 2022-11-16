@@ -5,8 +5,8 @@ const SingleLevelMenu = ({ linkObjectArr }) => {
     <nav id="navigation" className="main-navigation singlelevel auto-highlight">
       <ul id="nav_list" className="top-level-nav">
         {linkObjectArr.map((link, idx) => (
-          <li className="nav-item">
-            <a href={link.href} className="first-level-link" key={`slm-list-item${idx}`}>{link.text}</a>
+          <li className="nav-item" key={`slm-list-item${idx}`}>
+            <a href={link.href} className="first-level-link">{link.text}</a>
           </li>
         ))}
       </ul>
