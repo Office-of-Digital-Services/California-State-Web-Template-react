@@ -34,8 +34,7 @@ import Table from './components/Table/Table';
 import Tabs from './components/Tabs/Tabs';
 
 // Patterns
-import FullSpanBanner from './patterns/Banner/FullSpanBanner';
-import FeatureBanner from './patterns/Banner/FeatureBanner';
+import Banner from './patterns/Banner/Banner';
 import Card from './patterns/Card/Card';
 import BasicCardGrid from './patterns/CardGrid/BasicCardGrid';
 import NewsGrid from './patterns/CardGrid/NewsGrid';
@@ -60,6 +59,7 @@ import GradientBackgrounds from './get-started/GradientBackgrounds/GradientBackg
 import TextAccentColors from './get-started/TextAccentColors/TextAccentColors';
 
 import './js/cagov/tabs';
+import CardGrid from './patterns/CardGrid/CardGrid';
 
 function App() {
   return (
@@ -460,13 +460,15 @@ function App() {
       <div>
         <h1>Patterns</h1>
         <h2>Banner</h2>
-        <FullSpanBanner
+        <Banner
+          type={'fullspan'}
           titleText={'Title'}
           bodyText={'Highlight an action you want people to take or important information on the homepage.'}
           buttonText={'Short link'}
           imageSrc={bannerImage}
         />
-        <FeatureBanner
+        <Banner
+          type={'feature'}
           titleText={'Title'}
           bodyText={'Highlight an action you want people to take or important information on the homepage.'}
           buttonText={'Short link'}
@@ -481,11 +483,86 @@ function App() {
           bodyText={'Use this space to briefly tell your reader what they will find at the card\'s destination'}
           imageSrc={cardImage}
           altText={'Card size'}
+          buttonHref={'https://www.google.com'}
+          buttonText={'Go to Google'}
         />
       </div>
       <hr />
       <div>
         <h2>Card Grid</h2>
+        <CardGrid
+          contentArr={
+            [
+              {
+                titleText: 'Give your card a short title',
+                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google'
+              },
+              {
+                titleText: 'Give your card a short title',
+                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google'
+              },
+              {
+                titleText: 'Give your card a short title',
+                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google'
+              },
+              {
+                titleText: 'Give your card a short title',
+                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google'
+              },
+              {
+                titleText: 'Give your card a short title',
+                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google'
+              },
+              {
+                titleText: 'Give your card a short title',
+                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google'
+              },
+              {
+                titleText: 'Give your card a short title',
+                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google'
+              },
+              {
+                titleText: 'Give your card a short title',
+                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google'
+              },
+
+
+
+            ]
+          }
+        />
         <BasicCardGrid />
         <NewsGrid />
         <ImageryGrid />
