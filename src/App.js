@@ -6,6 +6,9 @@ import cardImage from './patterns/Card/card-image.jpg';
 import parallaxImage1 from './components/Parallax/background-primary.jpg';
 import parallaxImage2 from './components/Parallax/bg-open-data.jpg';
 import parallaxImage3 from './components/Parallax/main-banner4.jpg';
+import sunflower1 from './patterns/CardGrid/sunflower1.jpg';
+import sunflower2 from './patterns/CardGrid/sunflower2.jpg';
+import sunflower3 from './patterns/CardGrid/sunflower3.jpg';
 
 // JSON for component props
 // import alertData from './exampleData/alertProps.json';
@@ -36,13 +39,9 @@ import Tabs from './components/Tabs/Tabs';
 // Patterns
 import Banner from './patterns/Banner/Banner';
 import Card from './patterns/Card/Card';
-import BasicCardGrid from './patterns/CardGrid/BasicCardGrid';
-import NewsGrid from './patterns/CardGrid/NewsGrid';
-import ImageryGrid from './patterns/CardGrid/ImageryGrid';
+import CardGrid from './patterns/CardGrid/CardGrid';
 import LinkGrid from './patterns/LinkGrid/LinkGrid';
-import HorizontalTracker from './patterns/ProgressTracker/HorizontalTracker';
-import VerticalTracker from './patterns/ProgressTracker/VerticalTracker';
-import StepList from './patterns/ProgressTracker/StepList';
+import ProgressTracker from './patterns/ProgressTracker/ProgressTracker';
 
 // Structure
 import UtilityHeader from './structure/UtilityHeader/UtilityHeader';
@@ -59,7 +58,6 @@ import GradientBackgrounds from './get-started/GradientBackgrounds/GradientBackg
 import TextAccentColors from './get-started/TextAccentColors/TextAccentColors';
 
 import './js/cagov/tabs';
-import CardGrid from './patterns/CardGrid/CardGrid';
 
 function App() {
   return (
@@ -478,6 +476,7 @@ function App() {
       <hr />
       <div className={'col-md-2'}>
         <h2>Card</h2>
+        <h3>Basic Card</h3>
         <Card
           titleText={'Give your card a short title'}
           bodyText={'Use this space to briefly tell your reader what they will find at the card\'s destination'}
@@ -485,6 +484,19 @@ function App() {
           altText={'Card size'}
           buttonHref={'https://www.google.com'}
           buttonText={'Go to Google'}
+        />
+        <h3>News Card</h3>
+        <Card
+          titleText={'Give your card a short title'}
+          bodyText={'Use this space to briefly tell your reader what they will find at the card\'s destination'}
+          imageSrc={cardImage}
+          altText={'Card size'}
+          buttonHref={'https://www.google.com'}
+          buttonText={'Go to Google'}
+          type={'news'}
+          date={'Nov 17, 2022'}
+          author={'John Doe'}
+          agency={'CDT'}
         />
       </div>
       <hr />
@@ -499,7 +511,7 @@ function App() {
                 imageSrc: cardImage,
                 altText: 'Card size',
                 buttonHref: 'https://www.google.com',
-                buttonText: 'Go to Google'
+                buttonText: 'Go to Google',
               },
               {
                 titleText: 'Give your card a short title',
@@ -515,65 +527,183 @@ function App() {
                 imageSrc: cardImage,
                 altText: 'Card size',
                 buttonHref: 'https://www.google.com',
-                buttonText: 'Go to Google'
+                buttonText: 'Go to Google',
               },
-              {
-                titleText: 'Give your card a short title',
-                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
-                imageSrc: cardImage,
-                altText: 'Card size',
-                buttonHref: 'https://www.google.com',
-                buttonText: 'Go to Google'
-              },
-              {
-                titleText: 'Give your card a short title',
-                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
-                imageSrc: cardImage,
-                altText: 'Card size',
-                buttonHref: 'https://www.google.com',
-                buttonText: 'Go to Google'
-              },
-              {
-                titleText: 'Give your card a short title',
-                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
-                imageSrc: cardImage,
-                altText: 'Card size',
-                buttonHref: 'https://www.google.com',
-                buttonText: 'Go to Google'
-              },
-              {
-                titleText: 'Give your card a short title',
-                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
-                imageSrc: cardImage,
-                altText: 'Card size',
-                buttonHref: 'https://www.google.com',
-                buttonText: 'Go to Google'
-              },
-              {
-                titleText: 'Give your card a short title',
-                bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
-                imageSrc: cardImage,
-                altText: 'Card size',
-                buttonHref: 'https://www.google.com',
-                buttonText: 'Go to Google'
-              },
-
-
-
             ]
           }
         />
-        <BasicCardGrid />
-        <NewsGrid />
-        <ImageryGrid />
-        <LinkGrid linkArr={[{ href: '#', linkText: 'Short link 1' }, { href: '#', linkText: 'Short link 2' }, { href: '#', linkText: 'Short link 3' }]} />
+        <CardGrid
+          contentArr={
+            [
+              {
+                titleText: 'Short title',
+                bodyText: 'Briefly tell your reader what they will find at the card\'s destination then link to the official news release or news section within your site.',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google',
+                date: 'Month DD, YYYY',
+                author: 'Author',
+                agency: 'Agency',
+                type: 'news'
+              },
+              {
+                titleText: 'Short title',
+                bodyText: 'Briefly tell your reader what they will find at the card\'s destination then link to the official news release or news section within your site.',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google',
+                date: 'Month DD, YYYY',
+                author: 'Author',
+                agency: 'Agency',
+                type: 'news'
+              },
+              {
+                titleText: 'Short title',
+                bodyText: 'Briefly tell your reader what they will find at the card\'s destination then link to the official news release or news section within your site.',
+                imageSrc: cardImage,
+                altText: 'Card size',
+                buttonHref: 'https://www.google.com',
+                buttonText: 'Go to Google',
+                date: 'Month DD, YYYY',
+                author: 'Author',
+                agency: 'Agency',
+                type: 'news'
+              },
+            ]
+          }
+        />
+        <CardGrid
+          contentArr={
+            [
+              {
+                titleText: 'Infographic',
+                bodyText: 'Commonly recognized by visitors and generally reserved for data-rich visualization.',
+                icon: 'ca-gov-icon-clipboard text-huge d-block text-center color-p2 color-p2-hover'
+              },
+              {
+                titleText: 'Icons',
+                bodyText: 'Should be simple and maintain the likeness of the object it represents.',
+                icon: 'ca-gov-icon-accessibility text-huge d-block text-center color-p2 color-p2-hover'
+              },
+              {
+                titleText: 'Card body',
+                bodyText: 'This space should quickly describe what visitors will find at the button link.',
+                icon: 'ca-gov-icon-calendar text-huge d-block text-center color-p2 color-p2-hover'
+              },
+            ]
+          }
+        />
+        <CardGrid
+          contentArr={
+            [
+              {
+                imageSrc: sunflower1,
+                altText: 'Yellow sunflower',
+                titleText: 'Card title',
+                bodyText: 'Briefly tell your reader what they will find at the card\'s destination then link to that location.',
+              },
+              {
+                imageSrc: sunflower2,
+                altText: 'Yellow sunflower',
+                titleText: 'Card title',
+                bodyText: 'Briefly tell your reader what they will find at the card\'s destination then link to that location.'
+              },
+              {
+                imageSrc: sunflower3,
+                altText: 'Yellow sunflower',
+                titleText: 'Card title',
+                bodyText: 'Briefly tell your reader what they will find at the card\'s destination then link to that location.'
+              },
+            ]
+          }
+        />
+        <h3>Link Grid</h3>
+        <LinkGrid linkArr={
+          [
+            { href: '#', linkText: 'Short link 1' },
+            { href: '#', linkText: 'Short link 2' },
+            { href: '#', linkText: 'Short link 3' }
+          ]
+        } />
       </div>
       <hr />
       <div>
         <h2>Progress Tracker</h2>
-        <HorizontalTracker />
-        <VerticalTracker />
-        <StepList />
+        <ProgressTracker
+          type={'horizontal'}
+          currentStep={3}
+          contentArr={
+            [
+              {
+                title: 'Step 1',
+                body: 'Briefly discuss the step or identify the milestone.',
+              },
+              {
+                title: 'Step 2',
+                body: 'Keep the message clear and concise.',
+              },
+              {
+                title: 'Step 3',
+                body: 'Do not link to more information from the tracker.',
+              },
+              {
+                title: 'Step 4',
+                body: 'Instead, link to additional information in your body content or tracker caption.',
+              },
+            ]
+          }
+        />
+        <ProgressTracker
+          type={'vertical'}
+          contentArr={
+            [
+              {
+                title: 'Step 1 Contributor',
+                body: 'Briefly discuss the step or identify the milestone.',
+                date: 'YY - YY'
+              },
+              {
+                title: 'Step 2 Contributor',
+                body: 'Keep the message clear and concise.',
+                date: 'YY - YY'
+
+              },
+              {
+                title: 'Step 3 Contributor',
+                body: 'Do not link to more information from the tracker.',
+                date: 'YY - YY'
+
+              },
+              {
+                title: 'Step 4 Contributor',
+                body: 'Instead, link to additional information in your body content or tracker caption.',
+                date: 'YY - YY'
+
+              },
+            ]
+          }
+        />
+        <ProgressTracker
+          type={'step'}
+          contentArr={
+            [
+              {
+                title: ' Give your steps a clear, concise title ',
+                body: 'The step list is a good fit for lengthy content. Use this space to discuss the step or identify the milestone. If there is information that your visitor must know before completing this step, you can talk about that here too.',
+              },
+              {
+                title: 'Make your steps actionable',
+                body: 'Be sure to tell your visitor exactly what they have to do to complete the step. If the process is not fully fleshed out, then this component may not be the best fit for your content. ',
+              },
+              {
+                title: 'Conclude the process',
+                body: 'All good things must come to an end. Tell your reader how to complete their task. If needed, you can link to additional information in the step list content. ',
+              },
+            ]
+          }
+        />
       </div>
       <hr />
       <div>
