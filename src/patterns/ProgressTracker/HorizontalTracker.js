@@ -3,10 +3,7 @@ import React from 'react'
 const HorizontalTracker = ({ contentArr, currentStep }) => {
 
   const setClass = (index) => {
-    console.log('currentStep', currentStep);
-    console.log('index', index);
-    console.log('contentArr.length', contentArr.length);
-
+    // Can probably be refactored :)
     if (index === 0 && currentStep !== contentArr.length && currentStep !== 1) {
       index = 'otherstart';
     }
@@ -25,8 +22,6 @@ const HorizontalTracker = ({ contentArr, currentStep }) => {
     if (index >= currentStep - 1) {
       index = 'incomplete';
     }
-
-    console.log('index after: ', index);
 
     switch (index) {
       case 'otherstart':
