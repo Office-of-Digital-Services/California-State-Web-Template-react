@@ -2,6 +2,6 @@ import React from 'react';
 import BasicAccordion from './BasicAccordion';
 import AccordionList from './AccordionList';
 
-const Accordion = ({ type, summaryStr, bodyArr, contentObj }) => (type === 'list' ? <AccordionList contentObj={contentObj} /> : <BasicAccordion summaryStr={summaryStr} bodyArr={bodyArr} />);
+const Accordion = ({ type, summaryStr, bodyArr, contentArr }) => (type === 'list' ? <AccordionList contentArr={contentArr} /> : <BasicAccordion summaryStr={summaryStr} contentArr={contentArr} />);
 
 export default Accordion

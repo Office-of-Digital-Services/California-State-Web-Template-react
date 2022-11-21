@@ -68,14 +68,14 @@ function App() {
         <h3>Basic Accordion</h3>
         <Accordion
           summaryStr={'Here is a summary'}
-          bodyArr={['Here is some text for body #1', 'Here is more text for another paragraph']}
+          contentArr={['Here is some text for body #1', 'Here is more text for another paragraph']}
         />
       </div>
       <div>
         <h3>Accordion List</h3>
         <Accordion
           type={'list'}
-          contentObj={[{
+          contentArr={[{
             heading: 'Item 1',
             content: 'Content for item 1'
           },

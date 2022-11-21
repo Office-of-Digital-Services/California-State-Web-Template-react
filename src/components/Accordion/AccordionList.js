@@ -1,9 +1,9 @@
 import React from 'react'
 
-const AccordionList = ({ contentObj }) => {
+const AccordionList = ({ contentArr }) => {
   return (
     <ol data-aria-accordion={''} data-multi={''} data-transition={''} data-default={'none'} id={'acc_1-1'} className={'accordion'}>
-      {contentObj.map((item, idx) => {
+      {contentArr.map((item, idx) => {
         return (
           <li key={`al-list-item${idx}`}>
             <h3 data-aria-accordion-heading={''} className={'accordion__heading'}>
