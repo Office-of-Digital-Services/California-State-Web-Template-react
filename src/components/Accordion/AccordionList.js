@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+// import '../../js/cagov/accordion-list';
+
 
 const AccordionList = ({ contentArr }) => {
   return (

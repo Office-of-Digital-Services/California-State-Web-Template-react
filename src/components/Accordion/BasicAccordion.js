@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+// import '../../js/cagov/accordion';
+
 
 const BasicAccordion = ({ summaryStr, contentArr }) => {
   return (

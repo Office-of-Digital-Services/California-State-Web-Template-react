@@ -1,5 +1,5 @@
 ## Accordion
-<p class="description">The Accordion component is dynamic and can generate a Basic Accordion or Accordion list depending on the value of the `type` prop.</p> 
+<p className="description">The Accordion component is dynamic and can generate a Basic Accordion or Accordion list depending on the value of the `type` prop.</p> 
 
 ### Basic Accordion
 ```
