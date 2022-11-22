@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../../js/cagov/number-counter';
 
 const NumberCounter = ({ countTimeInMs = '4000', targetNumber }) => {
   return (
