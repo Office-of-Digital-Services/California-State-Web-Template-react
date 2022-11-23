@@ -12,9 +12,6 @@ import sunflower1 from './patterns/CardGrid/sunflower1.jpg';
 import sunflower2 from './patterns/CardGrid/sunflower2.jpg';
 import sunflower3 from './patterns/CardGrid/sunflower3.jpg';
 
-// JSON for component props
-// import alertData from './exampleData/alertProps.json';
-
 // Components
 import Accordion from './components/Accordion/Accordion';
 import Alert from './components/Alert/Alert';
@@ -58,8 +55,6 @@ import Megamenu from './structure/SiteNavigation/Megamenu';
 import Footer from './structure/Footer/Footer';
 import GradientBackgrounds from './get-started/GradientBackgrounds/GradientBackgrounds';
 import TextAccentColors from './get-started/TextAccentColors/TextAccentColors';
-import CombinedStructure from './structure/CombinedStructure/CombinedStructure';
-import SiteFooter from './structure/SiteFooter/SiteFooter';
 
 function App() {
 
@@ -783,8 +778,6 @@ function App() {
           </div>
         </main>
       </div>
-      <SiteFooter />
-      <Footer />
     </>
   );
 }
