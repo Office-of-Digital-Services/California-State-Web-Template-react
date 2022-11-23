@@ -2,15 +2,15 @@ import React from 'react'
 
 const Blockquote = ({ withGraphic = true, withPulledQuote = false, isProminent = false, quote, author, imageSrc, altText }) => {
 
-  const buildClassName = (_withGraphic, _withPulledQuote, _isProminent) => {
+  const buildClassName = (addGraphic, addPulledQuote, addProminent) => {
     let str = '';
-    if (!_withGraphic) {
+    if (!addGraphic) {
       str += 'no-quotation-mark ';
     }
-    if (_withPulledQuote) {
+    if (addPulledQuote) {
       str += 'pull-quote ';
     }
-    if (_isProminent) {
+    if (addProminent) {
       str += 'prominent';
     }
     return str;
