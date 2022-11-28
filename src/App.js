@@ -263,10 +263,7 @@ function App() {
             <hr />
             <h2>Countdown Timer</h2>
             <div>
-              <CountdownTimer
-                dateStr={'Jan 1, 2023 00:00:00'}
-                isDefaultColor={false}
-              />
+
             </div>
             <hr />
             <h2>Form Elements</h2>
@@ -320,7 +317,7 @@ function App() {
                 <FileInput
                   id={'test_file_input'}
                   labelText={'Upload your file'}
-                  feedbactText={'Feedback text.'}
+                  feedbackText={'Feedback text.'}
                 />
               </form>
             </div>
@@ -346,12 +343,18 @@ function App() {
             <div>
               <h2>Modal</h2>
               <button type="button" className="btn btn-default btn-lg m-t-lg" data-bs-toggle="modal" data-bs-target="#modal">Open modal</button>
-              <Modal headingText={'This is the modal container\'s heading'} bodyText={'This is the modal container\'s body'} />
+              <Modal
+                headingText={'This is the modal container\'s heading'}
+                bodyText={'This is the modal container\'s body'}
+              />
             </div>
             <hr />
             <div>
               <h2>Number Counter</h2>
-              <NumberCounter targetNumber={300} />
+              <NumberCounter
+                countTime={'5000'}
+                targetNumber={300}
+              />
             </div>
             <hr />
             <div>

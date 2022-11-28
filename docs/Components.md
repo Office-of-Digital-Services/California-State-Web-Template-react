@@ -364,3 +364,635 @@ Sets Button size
 <td><code>false</code></td>
 <td>Sets Countdown Timer color to primary or gray.</td>
 </tr>
+</table>
+</div>
+
+## Form Elements
+<p>Form Elements include components for Checkbox, DropdownMenu, FileInput, Label, RadioButton, TextArea, and TextField.</p>
+
+### Checkbox
+```
+<Checkbox
+  id={'exampleCheckbox1'}
+  checkboxText={'Option 1'}
+  checkboxValue={'1'}
+/>
+```
+
+<div>
+<h4>Props</h4>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets id for Checkbox.</td>
+</tr>
+<tr>
+<td><code>checkboxText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets text to display in Checkbox label</td>
+</tr>
+<tr>
+<td><code>checkboxValue</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets value for Checkbox</td>
+</tr>
+</table>
+</div>
+
+### Dropdown Menu
+```
+<DropdownMenu
+  id={'test_dropdown'}
+  labelText={'Custom select'}
+  optionsArr={[{ text: 'Option 1', value: '1' }, { text: 'Option 2', value: '2' }, { text: 'Option 3', value: '3' }]}
+/>
+```
+
+<div>
+<h4>Props</h4>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets id for Dropdown Menu.</td>
+</tr>
+<tr>
+<td><code>labelText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets text to display in Dropdown Menu label</td>
+</tr>
+<tr>
+<td><code>optionsArr</code></td>
+<td><code>array</code></td>
+<td><code></code></td>
+<td>An array of Objects containing <code>text</code> and <code>value</code> keys.</td>
+</tr>
+</table>
+</div>
+
+### File Input
+```
+<FileInput
+  id={'test_file_input'}
+  labelText={'Upload your file'}
+  feedbackText={'Feedback text.'}
+/>
+```
+
+<div>
+<h4>Props</h4>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets id for File Input.</td>
+</tr>
+<tr>
+<td><code>labelText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets text to display in File Input label.</td>
+</tr>
+<tr>
+<td><code>feedbackText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets feedback text for File Input.</td>
+</tr>
+</table>
+</div>
+
+### Label
+```
+<Label 
+  labelFor={'input-1'}
+  labelText={'Display text goes here'}
+/>
+```
+
+<div>
+<h4>Props</h4>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>labelFor</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Determines html tag that Label refers to. Set value to target tag's <code>id</code></td>
+</tr>
+<tr>
+<td><code>labelText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets text to display in Label.</td>
+</tr>
+</table>
+</div>
+
+### Radio Button
+```
+<RadioButton
+  id={'exampleRadio1'}
+  radioName={'test_group'}
+  radioText={'Option 1'}
+  radioValue={'1'}
+/>
+```
+
+<div>
+<h4>Props</h4>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets id for Radio Button.</td>
+</tr>
+<tr>
+<td><code>radioName</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets name for Radio Button.</td>
+</tr>
+<tr>
+<td><code>radioText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets display text for Radio Button label.</td>
+</tr>
+<tr>
+<td><code>radioValue</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets value for Radio Button.</td>
+</tr>
+</table>
+</div>
+
+### Text Area
+```
+<TextArea
+  id={'exampleInputComment'}
+  isRequired={true}
+  labelText={'Your message'}
+  subText={'Use this space for error messages or instructional text'}
+/>
+```
+
+<div>
+<h4>Props</h4>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets id for Text Area.</td>
+</tr>
+<tr>
+<td><code>isRequired</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td>Sets required attribute for Text Area.</td>
+</tr>
+<tr>
+<td><code>labelText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets display text for Text Area label.</td>
+</tr>
+<tr>
+<td><code>subText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets subtext for Text Area.</td>
+</tr>
+</table>
+</div>
+
+### Text Field
+```
+<TextField 
+  id={'InputName'}
+  isRequired={false}
+  labelText={'Full Name'}
+  placeholder={'Name'}
+/>
+```
+
+<div>
+<h4>Props</h4>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets id for Text Field.</td>
+</tr>
+<tr>
+<td><code>isRequired</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td>Sets required attribute for Text Field.</td>
+</tr>
+<tr>
+<td><code>labelText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets display text for Text Field label.</td>
+</tr>
+<tr>
+<td><code>placeholder</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets placeholder text for Text Field.</td>
+</tr>
+</table>
+</div>
+
+## Horizontal Separator
+<p>The Horizontal Separator component style can be set by using the <code>isDotted</code> prop.</p>
+
+```
+<HorizontalSeparator isDotted={true} />
+```
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>isDotted</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td>Sets style for Horizontal Separator.</td>
+</tr>
+</table>
+</div>
+
+## Lists
+<p>The type of List can be set by using the <code>type</code> prop. </p>
+
+```
+<Lists
+  itemsArr={['List step 1 of your process.', 'List the second step of your process.', 'List the third step of your process.']}
+  type={'ordered'}
+/>
+```
+
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>itemsArr</code></td>
+<td><code>array</code></td>
+<td><code></code></td>
+<td>Each array index generates a list item from that index's value.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Pass in 'ordered' to generate an ordered list</td>
+</tr>
+</table>
+</div>
+
+## Modal
+<p>The Modal heading and body text can be set by using props.</p>
+
+```
+<Modal 
+  bodyText={'This is the modal container\'s body'} 
+  headingText={'This is the modal container\'s heading'}
+/>
+```
+
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>bodyText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets the text to display in the Modal body.</td>
+</tr>
+<tr>
+<td><code>headingText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets the text to display in the Modal heading.</td>
+</tr>
+</table>
+</div>
+
+## Number Counter
+<p>The Number Counter component's count speed and target number can be set by using props</p>
+
+```
+<NumberCounter
+  countTime={'5000'}
+  targetNumber={300}
+/>
+```
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>countTime</code></td>
+<td><code>string</code></td>
+<td><code>'4000'</code></td>
+<td>Sets the count time for the Number Counter.</td>
+</tr>
+<tr>
+<td><code>targetNumber</code></td>
+<td><code>int</code></td>
+<td><code></code></td>
+<td>Sets the target number that the Number Counter stops at.</td>
+</tr>
+</table>
+</div>
+
+## Parallax
+<p>The Parallax component can be configured by using the <code>contentObj</code> prop.</p>
+
+```
+contentObj={
+  {
+    bodyText: 'Make light text on dark backgrounds by changing the hasLightTextColor prop value to true',
+    centerText: 'Add optional center text and container',
+    hasLightTextColor: true,
+    headingText: 'Light text color',
+    heightInPx: '300',
+    imageSrc: './path/to/image.jpg',
+  }
+}
+```
+
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>contentObj</code></td>
+<td><code>object</code></td>
+<td><code></code></td>
+<td>An object containing the following keys:
+<ul>
+<li><code>bodyText</code><br />Sets body text</li>
+<li><code>centerText</code><br />Sets center text and container</li>
+<li><code>hasLightTextColor</code><br />Darkens background if set <code>true</code></li>
+<li><code>headingText</code><br />Sets heading text</li>
+<li><code>heightInPx</code><br />Sets height in pixels</li>
+<li><code>imageSrc</code><br />Sets URI for image</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+
+## Progress Bar
+<p>The completion percentage can be set by using <code>percentComplete</code> prop</p>
+
+```
+<ProgressBar percentComplete={50} />
+```
+
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>percentComplete</code></td>
+<td><code>int</code></td>
+<td><code></code></td>
+<td>Sets the completion percentage to display</td>
+</tr>
+</table>
+</div>
+
+## Social Media Icons
+<p>Social Media Icons can be set by using the <code>contentArr</code> prop.</p>
+
+```
+<SocialMediaIcons
+  contentArr={[
+    {
+      type: 'facebook',
+      href: 'https://www.facebook.com/'
+    },
+    {
+      type: 'github',
+      href: 'https://www.github.com/'
+    },
+    {
+      type: 'email',
+      href: 'mailto:your_email@ca.gov'
+    }
+  ]}
+/>
+```
+
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>contentArr</code></td>
+<td><code>array</code></td>
+<td><code></code></td>
+<td>An array of objects containing the following keys:
+<ul>
+<li><code>type</code><br />
+  <ul>
+    <li>facebook</li>
+    <li>github</li>
+    <li>twitter</li>
+    <li>youtube</li>
+    <li>linkedin</li>
+    <li>instagram</li>
+    <li>email</li>
+  </ul>
+</li>
+<li><code>href</code><br />Sets destination URL</li>
+
+</ul>
+</td>
+</tr>
+</table>
+</div>
+
+## Table
+<p>Different Table types can be generated by using the <code>type</code> prop.</p>
+
+```
+<Table
+  type={'shaded'}
+  headerArr={['#', 'First Name', 'Last Name', 'Username']}
+  rowArr={[['1', 'Mark', 'Otto', '@mdo'], ['2', 'Jacob', 'Thornton', '@jthornton'], ['3', 'Larry', 'the Bird', '@twitter']]}
+/>
+```
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td><code>default</code></td>
+<td>Sets class for Table
+<ul>
+<li>shaded</li>
+<li>zebra</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><code>headerArr</code></td>
+<td><code>array</code></td>
+<td><code></code></td>
+<td>Each array index generates a table header containing the index value</td>
+</tr>
+<tr>
+<td><code>rowArr</code></td>
+<td><code>array</code></td>
+<td><code></code></td>
+<td>A nested array where each index contains an array with each row's data. </td>
+</tr>
+</table>
+</div>
+
+## Tabs
+<p>Tab content is generated by using props.</p>
+
+```
+<Tabs
+  headerArr={['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4']}
+  sectionArr={
+    [
+      { headline: 'Tab 1 headline', text: 'Tab 1 text' },
+      { headline: 'Tab 2 headline', text: 'Tab 2 text' },
+      { headline: 'Tab 3 headline', text: 'Tab 3 text' },
+      { headline: 'Tab 4 headline', text: 'Tab 4 text' }
+    ]
+  }
+/>
+```
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td><code>headerArr</code></td>
+<td><code>array</code></td>
+<td><code></code></td>
+<td>Each array index generates a Tab header containing the index value</td>
+</tr>
+<tr>
+<td><code>sectionArr</code></td>
+<td><code>array</code></td>
+<td><code></code></td>
+<td>An array of objects containing the following keys:
+<ul>
+<li><code>headline</code><br />Sets Tab content headline</li>
+<li><code>text</code><br />Sets Tab content body text</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
