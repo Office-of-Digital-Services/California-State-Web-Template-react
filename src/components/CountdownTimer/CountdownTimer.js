@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CountdownTimer = ({ dateStr, isDefaultColor }) => {
+const CountdownTimer = ({ dateStr, isDefaultColor = false }) => {
   // Set the date we're counting down to
   const countDownDate = new Date(dateStr).getTime();
 

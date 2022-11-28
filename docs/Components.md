@@ -117,9 +117,10 @@ The Alert component is dynamic and can generate different Alerts based on the `a
 <td>Sets the button text to display</td>
 </tr>
 </table>
+</div>
 
 ## Blockquote
-The Blockquote component is dynamic and can generate different quote styles based on the
+The Blockquote component is dynamic and can generate different quote styles based on the props passed in.
 ### With graphic
 
 ```
@@ -215,3 +216,151 @@ The Blockquote component is dynamic and can generate different quote styles base
 </tr>
 </table>
 </div>
+
+## Breadcrumb
+<p>The Breadcrumb component uses passed in props to determine what to display</p>   
+
+```
+<Breadcrumb
+  breadcrumbArr={[
+    {
+      href: '#',
+      title: 'Breadcrumb 1'
+    },
+    {
+      href: '#',
+      title: 'Breadcrumb 2'
+    }
+  ]}
+  currentPage={'Current Page'}
+/>
+```   
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>breadcrumbArr</code></td>
+<td><code>array</code></td>
+<td><code></code></td>
+<td>An array of Objects containing <code>href</code> and <code>title</code> keys</td>
+</tr>
+<tr>
+<td><code>currentPage</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>The title of the active page</td>
+</tr>
+</table>
+</div>
+
+## Button
+<p>The Button component takes in props to set button size, text, type, disabled value, and hyperlink destination.</p>
+
+```
+<Button
+  buttonSize={'lg'}
+  buttonText={'Primary color'}
+  buttonType={'primary'}
+  disabled={true}
+  href={'#'}
+/>
+
+```
+
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>buttonSize</code></td>
+<td><code>string</code></td>
+<td><code>'default'</code></td>
+<td>
+Sets Button size
+<ul>
+<li>lg</li>
+<li>default</li>
+<li>sm</li>
+<li>xs</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><code>buttonText</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets Button display text</td>
+</tr>
+<tr>
+<td><code>buttonType</code></td>
+<td><code>string</code></td>
+<td><code>'default'</code></td>
+<td>Sets class applied to Button
+<ul>
+<li>default</li>
+<li>primary</li>
+<li>highlight</li>
+<li>standout</li>
+<li>outline-primary</li>
+<li>outline-highlight</li>
+<li>outline-standout</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><code>disabled</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td>Sets Button <code>disabled</code> value</td>
+</tr>
+<tr>
+<td><code>href</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets URI to visit on Button click</td>
+</tr>
+</table>
+</div>
+
+## Countdown Timer
+<p>The Countdown Timer component allows for a target date and style to be passed in via props</p>
+
+```
+<CountdownTimer
+  dateStr={'Jan 1, 2023 00:00:00'}
+  isDefaultColor={false}
+/>
+```
+
+<div>
+<h3>Props</h3>
+<table>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><code>dateStr</code></td>
+<td><code>string</code></td>
+<td><code></code></td>
+<td>Sets countdown target date. Works with ISO-8601 formats.</td>
+</tr>
+<tr>
+<td><code>isDefaultColor</code></td>
+<td><code>Boolean</code></td>
+<td><code>false</code></td>
+<td>Sets Countdown Timer color to primary or gray.</td>
+</tr>
