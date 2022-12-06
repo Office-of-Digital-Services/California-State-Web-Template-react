@@ -2,17 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import UtilityHeader from './structure/UtilityHeader/UtilityHeader';
-import SiteFooter from './structure/SiteFooter/SiteFooter';
+import Header from './structure/Header/Header';
 import Footer from './structure/Footer/Footer';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UtilityHeader />
+    <Header />
     <App />
-    <SiteFooter />
     <Footer />
   </React.StrictMode>
 );

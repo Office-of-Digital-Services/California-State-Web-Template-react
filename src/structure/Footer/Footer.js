@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Logo from './Ca-Gov-Logo-Gold.svg';
-// import '../../js/cagov/return-top';
+import SiteFooter from '../SiteFooter/SiteFooter';
 
 const Footer = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://california.azureedge.net/cdt/statetemplate/6.0.8/js/cagov.core.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+
+  }, []);
   return (
     <>
+      <SiteFooter />
       <footer id="footer" className="global-footer">
         <button className="return-top"><span className="sr-only">Back to top</span></button>
         <div className="container">

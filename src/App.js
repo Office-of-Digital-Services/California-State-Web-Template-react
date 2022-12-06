@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 // Sample images
 import testAvatar from './components/Blockquote/blockquote-with-image.jpg';
 import bannerImage from './patterns/Banner/main-banner10.jpg';
@@ -43,28 +41,19 @@ import LinkGrid from './patterns/LinkGrid/LinkGrid';
 import ProgressTracker from './patterns/ProgressTracker/ProgressTracker';
 
 // Structure
-import UtilityHeader from './structure/UtilityHeader/UtilityHeader';
+import UtilityHeader from './structure/Header/Header';
 import SiteHeader from './structure/SiteHeader/SiteHeader';
 import MobileControls from './structure/MobileControls/MobileControls';
 import ActiveSearch from './structure/Search/ActiveSearch';
 import InactiveSearch from './structure/Search/InactiveSearch';
 import FeaturedSearch from './structure/Search/FeaturedSearch';
-import SingleLevelMenu from './structure/SiteNavigation/SingleLevelMenu';
-import NavigationDropdownMenu from './structure/SiteNavigation/NavigationDropdownMenu';
-import Megamenu from './structure/SiteNavigation/Megamenu';
+import SiteNavigation from './structure/SiteNavigation/SiteNavigation';
 import Footer from './structure/Footer/Footer';
 import GradientBackgrounds from './get-started/GradientBackgrounds/GradientBackgrounds';
 import TextAccentColors from './get-started/TextAccentColors/TextAccentColors';
+import IconMenu from './structure/SiteNavigation/IconMenu';
 
 function App() {
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://california.azureedge.net/cdt/statetemplate/6.0.8/js/cagov.core.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-  }, []);
 
   return (
     <>
@@ -750,9 +739,11 @@ function App() {
               <hr />
               <div>
                 <h2>Site Navigation</h2>
+
                 <h3>Single Level Menu</h3>
-                <SingleLevelMenu
-                  linkObjectArr={[
+                <SiteNavigation
+                  type={'single'}
+                  contentArr={[
                     { href: '#', text: 'Getting Started' },
                     { href: '#', text: 'Color Schemes' },
                     { href: '#', text: 'Components' },
@@ -762,9 +753,53 @@ function App() {
                   ]}
                 />
                 <h3>Dropdown Menu</h3>
-                <NavigationDropdownMenu />
+                <SiteNavigation
+                  type={'dropdown'}
+                  contentArr={[
+                    {
+                      navHeader: 'Getting Started',
+                      navBodyArr: [
+                        { title: 'Site 1', href: 'www.google.com' },
+                        { title: 'Site 2', href: 'www.google.com' },
+                        { title: 'Site 3', href: 'www.google.com' },
+                      ]
+                    },
+                    {
+                      navHeader: 'Color Schemes',
+                      navBodyArr: [
+                        { title: 'Site 2-1', href: 'www.google.com' },
+                        { title: 'Site 2-2', href: 'www.google.com' },
+                        { title: 'Site 2-3', href: 'www.google.com' }
+                      ]
+                    }
+                  ]}
+                />
                 <h3>Megamenu</h3>
-                <Megamenu />
+                <SiteNavigation
+                  type={'megamenu'}
+                  contentArr={[
+                    {
+                      hasBorder: false,
+                      navHeader: 'Testing',
+                      navBodyArr: [
+                        { title: 'Site 1', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
+                        { title: 'Site 2', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
+                        { title: 'Site 3', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' }
+                      ]
+                    },
+                    {
+                      hasBorder: true,
+                      navHeader: 'Testing',
+                      navBodyArr: [
+                        { title: 'Site 1', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
+                        { title: 'Site 2', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
+                        { title: 'Site 3', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' }
+                      ]
+                    }
+                  ]}
+                />
+                <h3>Icon Menu</h3>
+                <IconMenu />
               </div>
               <div>
                 <h2>Footer</h2>
@@ -772,7 +807,7 @@ function App() {
               </div>
             </div>
             <div>
-              <h2 id={'get-started'}>Get Started</h2>
+              <h2 id={'get-started'}>CSS Shortcuts</h2>
               <h3>Gradient Backgrounds</h3>
               <GradientBackgrounds type={'radial-secondary-light'} />
               <h3>Text Accent Colors</h3>
