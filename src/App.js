@@ -252,7 +252,9 @@ function App() {
             <hr />
             <h2>Countdown Timer</h2>
             <div>
-
+              <CountdownTimer
+                dateStr={'Jan 1, 2023 00:00:00'}
+              />
             </div>
             <hr />
             <h2>Form Elements</h2>
@@ -809,10 +811,48 @@ function App() {
             <div>
               <h2 id={'get-started'}>CSS Shortcuts</h2>
               <h3>Gradient Backgrounds</h3>
-              <GradientBackgrounds type={'radial-secondary-light'} />
+              <div>
+                <div style={{ display: 'flex' }}>
+                  <GradientBackgrounds type={'primary'} />
+                  <GradientBackgrounds type={'highlight'} />
+                  <GradientBackgrounds type={'standout'} />
+                  <GradientBackgrounds type={'secondary'} />
+                </div>
+                <div style={{ display: 'flex' }}>
+                  <GradientBackgrounds type={'primary-standout'} />
+                  <GradientBackgrounds type={'primary-highlight'} />
+                  <GradientBackgrounds type={'primary-secondary'} />
+                  <GradientBackgrounds type={'standout-highlight'} />
+                </div>
+              </div>
+              <hr />
               <h3>Text Accent Colors</h3>
-              <TextAccentColors accentClass={'text-accent-p1 bg-dark'} text={'Hello world'} htmlTag={'p'} />
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <TextAccentColors accentClass={'text-accent1'} text={'Hello world'} htmlTag={'p'} />
+                <TextAccentColors accentClass={'text-accent2'} text={'Hello world'} htmlTag={'p'} />
+                <TextAccentColors accentClass={'text-accent3'} text={'Hello world'} htmlTag={'p'} />
+                {/* <TextAccentColors accentClass={'text-accent4'} text={'Hello world'} htmlTag={'p'} />
+                <TextAccentColors accentClass={'text-accent5'} text={'Hello world'} htmlTag={'p'} />
+                <TextAccentColors accentClass={'text-accent6'} text={'Hello world'} htmlTag={'p'} />
+                <TextAccentColors accentClass={'text-accent7'} text={'Hello world'} htmlTag={'p'} />
+                <TextAccentColors accentClass={'text-accent8'} text={'Hello world'} htmlTag={'p'} /> */}
+                <TextAccentColors accentClass={'text-accent9 bg-dark'} text={'Hello world'} htmlTag={'p'} />
+
+                <TextAccentColors accentClass={'text-accent-p1 bg-dark'} text={'Hello world'} htmlTag={'p'} />
+                {/* <TextAccentColors accentClass={'text-accent-p2'} text={'Hello world'} htmlTag={'p'} />
+                <TextAccentColors accentClass={'text-accent-p3'} text={'Hello world'} htmlTag={'p'} /> */}
+                <TextAccentColors accentClass={'text-accent-s1 bg-dark'} text={'Hello world'} htmlTag={'p'} />
+                {/* <TextAccentColors accentClass={'text-accent-s2 bg-dark'} text={'Hello world'} htmlTag={'p'} />
+                <TextAccentColors accentClass={'text-accent-s3 bg-dark'} text={'Hello world'} htmlTag={'p'} /> */}
+              </div>
+              <div>
+                <p>
+                  <TextAccentColors accentClass={'text-highlight'} text={'Note:'} />
+                  Here is a text highlight
+                </p>
+              </div>
             </div>
+            <hr />
           </div>
         </main>
       </div>
