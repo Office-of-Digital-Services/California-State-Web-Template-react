@@ -505,9 +505,11 @@ function App() {
             <hr />
             <div>
               <h2>Card Grid</h2>
+
               <div className={'tab-group responsive'}>
                 <div className={'tab-content'}>
 
+                  <h3>3 cards</h3>
                   <CardGrid
                     contentArr={
                       [
@@ -517,7 +519,7 @@ function App() {
                           imageSrc: cardImage,
                           altText: 'Card size',
                           buttonHref: 'https://www.google.com',
-                          buttonText: 'Go to Google',
+                          buttonText: 'Go to Google'
                         },
                         {
                           titleText: 'Give your card a short title',
@@ -533,8 +535,212 @@ function App() {
                           imageSrc: cardImage,
                           altText: 'Card size',
                           buttonHref: 'https://www.google.com',
-                          buttonText: 'Go to Google',
+                          buttonText: 'Go to Google'
+                        }
+                      ]
+                    }
+                  />
+                  <h3>4 cards</h3>
+                  <CardGrid
+                    contentArr={
+                      [
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
                         },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        }
+                      ]
+                    }
+                  />
+                  <h3>5 cards</h3>
+                  <CardGrid
+                    contentArr={
+                      [
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        }
+                      ]
+                    }
+                  />
+                  <h3>6 cards</h3>
+                  <CardGrid
+                    contentArr={
+                      [
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        }
+                      ]
+                    }
+                  />
+                  <h3>7 cards</h3>
+                  <CardGrid
+                    contentArr={
+                      [
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        },
+                        {
+                          titleText: 'Give your card a short title',
+                          bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                          imageSrc: cardImage,
+                          altText: 'Card size',
+                          buttonHref: 'https://www.google.com',
+                          buttonText: 'Go to Google'
+                        }
                       ]
                     }
                   />
