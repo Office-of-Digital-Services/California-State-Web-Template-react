@@ -40,18 +40,9 @@ import CardGrid from './patterns/CardGrid/CardGrid';
 import LinkGrid from './patterns/LinkGrid/LinkGrid';
 import ProgressTracker from './patterns/ProgressTracker/ProgressTracker';
 
-// Structure
-import UtilityHeader from './structure/Header/Header';
-import SiteHeader from './structure/SiteHeader/SiteHeader';
-import MobileControls from './structure/MobileControls/MobileControls';
-import ActiveSearch from './structure/Search/ActiveSearch';
-import InactiveSearch from './structure/Search/InactiveSearch';
-import FeaturedSearch from './structure/Search/FeaturedSearch';
-import SiteNavigation from './structure/SiteNavigation/SiteNavigation';
-import Footer from './structure/Footer/Footer';
+// CSS Shortcuts
 import GradientBackgrounds from './get-started/GradientBackgrounds/GradientBackgrounds';
 import TextAccentColors from './get-started/TextAccentColors/TextAccentColors';
-import IconMenu from './structure/SiteNavigation/IconMenu';
 
 function App() {
 
@@ -921,99 +912,6 @@ function App() {
               />
             </div>
             <hr id={'structure'} />
-            <div >
-              <h1 >Structural Elements</h1>
-              <div>
-                <h2>Utility Header</h2>
-                <UtilityHeader />
-              </div>
-              <div>
-                <h2>Site Header</h2>
-                <SiteHeader stateText={'State of California'} departmentText={'Web Template'} />
-              </div>
-              <div>
-                <h2>Mobile Controls</h2>
-                <MobileControls />
-              </div>
-              <div>
-                <h2>Search</h2>
-                <h3>Active Search</h3>
-                <ActiveSearch />
-                <h3>Inactive Search</h3>
-                <InactiveSearch />
-                <h3>Featured Search</h3>
-                <FeaturedSearch />
-              </div>
-              <hr />
-              <div>
-                <h2>Site Navigation</h2>
-
-                <h3>Single Level Menu</h3>
-                <SiteNavigation
-                  type={'single'}
-                  contentArr={[
-                    { href: '#', text: 'Getting Started' },
-                    { href: '#', text: 'Color Schemes' },
-                    { href: '#', text: 'Components' },
-                    { href: '#', text: 'Patterns' },
-                    { href: '#', text: 'About' },
-                    { href: '#', text: 'Contact Us' },
-                  ]}
-                />
-                <h3>Dropdown Menu</h3>
-                <SiteNavigation
-                  type={'dropdown'}
-                  contentArr={[
-                    {
-                      navHeader: 'Getting Started',
-                      navBodyArr: [
-                        { title: 'Site 1', href: 'www.google.com' },
-                        { title: 'Site 2', href: 'www.google.com' },
-                        { title: 'Site 3', href: 'www.google.com' },
-                      ]
-                    },
-                    {
-                      navHeader: 'Color Schemes',
-                      navBodyArr: [
-                        { title: 'Site 2-1', href: 'www.google.com' },
-                        { title: 'Site 2-2', href: 'www.google.com' },
-                        { title: 'Site 2-3', href: 'www.google.com' }
-                      ]
-                    }
-                  ]}
-                />
-                <h3>Megamenu</h3>
-                <SiteNavigation
-                  type={'megamenu'}
-                  contentArr={[
-                    {
-                      hasBorder: false,
-                      navHeader: 'Testing',
-                      navBodyArr: [
-                        { title: 'Site 1', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
-                        { title: 'Site 2', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
-                        { title: 'Site 3', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' }
-                      ]
-                    },
-                    {
-                      hasBorder: true,
-                      navHeader: 'Testing',
-                      navBodyArr: [
-                        { title: 'Site 1', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
-                        { title: 'Site 2', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
-                        { title: 'Site 3', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' }
-                      ]
-                    }
-                  ]}
-                />
-                <h3>Icon Menu</h3>
-                <IconMenu />
-              </div>
-              <div>
-                <h2>Footer</h2>
-                <Footer />
-              </div>
-            </div>
             <div>
               <h2 id={'get-started'}>CSS Shortcuts</h2>
               <h3>Gradient Backgrounds</h3>

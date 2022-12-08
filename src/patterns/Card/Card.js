@@ -38,7 +38,7 @@ const Card = ({ icon, imageSrc, altText, titleText, bodyText, buttonText, button
       <div className={'card-body bg-gray-50 bg-gray-100-hover'}>
         {icon ? <span className={icon} aria-hidden={'true'}></span> : null}
         <h3 className={'card-title'}>{titleText}</h3>
-        <p>{bodyText}</p>
+        <p className={'m-b-md'}>{bodyText}</p>
         {
           buttonText ?
             <a className='btn btn-primary p-x-md' href={buttonHref}>{buttonText}<span className='sr-only'>with link related to card title</span></a> :

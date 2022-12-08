@@ -3,11 +3,11 @@ import Logo from './Ca-Gov-Logo-Gold.svg';
 import SiteHeader from '../SiteHeader/SiteHeader';
 import MobileControls from '../MobileControls/MobileControls';
 import ActiveSearch from '../Search/ActiveSearch';
-import SingleLevelMenu from '../SiteNavigation/SingleLevelMenu';
+// import SingleLevelMenu from '../SiteNavigation/SingleLevelMenu';
 import SiteNavigation from '../SiteNavigation/SiteNavigation';
-import NavigationDropdownMenu from '../SiteNavigation/NavigationDropdownMenu';
-import Megamenu from '../SiteNavigation/Megamenu';
-import IconMenu from '../SiteNavigation/IconMenu';
+// import NavigationDropdownMenu from '../SiteNavigation/NavigationDropdownMenu';
+// import Megamenu from '../SiteNavigation/Megamenu';
+// import IconMenu from '../SiteNavigation/IconMenu';
 
 const Header = () => {
   return (
@@ -130,12 +130,32 @@ const Header = () => {
               }
             ]}
           /> */}
+          {/* <SiteNavigation
+            type={'dropdown'}
+            contentArr={[
+              {
+                navHeader: 'Testing',
+                navBodyArr: [
+                  { title: 'Site 1', href: 'www.google.com' },
+                  { title: 'Site 2', href: 'www.google.com' },
+                  { title: 'Site 3', href: 'www.google.com' }
+                ]
+              },
+              {
+                navHeader: 'Testing 2',
+                navBodyArr: [
+                  { title: 'Site 2-1', href: 'www.google.com' },
+                  { title: 'Site 2-2', href: 'www.google.com' },
+                  { title: 'Site 2-3', href: 'www.google.com' }
+                ]
+              }
+            ]}
+          /> */}
           <SiteNavigation
             type={'single'}
             contentArr={[
               { href: '#main-content', text: 'Components' },
               { href: '#patterns', text: 'Patterns' },
-              { href: '#structure', text: 'Structure' },
               { href: '#get-started', text: 'CSS Shortcuts' }
             ]}
           />
