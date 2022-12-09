@@ -29,6 +29,7 @@ import Modal from './components/Modal/Modal';
 import NumberCounter from './components/NumberCounter/NumberCounter';
 import Parallax from './components/Parallax/Parallax';
 import ProgressBar from './components/ProgressBar/ProgressBar';
+import SideNavigation from './components/SideNavigation/SideNavigation';
 import SocialMediaIcons from './components/SocialMediaIcons/SocialMediaIcons';
 import Table from './components/Table/Table';
 import Tabs from './components/Tabs/Tabs';
@@ -387,6 +388,61 @@ function App() {
             <div>
               <h2>Progress Bar</h2>
               <ProgressBar percentComplete={50} />
+            </div>
+            <hr />
+            <div>
+              <h2>Side Navigation</h2>
+              <h3>Single-Level List</h3>
+              <SideNavigation
+                contentArr={[
+                  { href: '#', text: 'Landing page', isActive: true, isLanding: true },
+                  { href: '#', text: 'Page 1' },
+                  { href: '#', text: 'Page 2' },
+                  { href: '#', text: 'Page 3' },
+                  { href: '#', text: 'Page 4' },
+                  { href: '#', text: 'Page 5' },
+                ]}
+              />
+              <h3>Multi-Level List</h3>
+              <SideNavigation
+                type={'multi'}
+                contentArr={[
+                  { href: '#', text: 'Page 1' },
+                  { href: '#', text: 'Page 2' },
+                  { href: '#', text: 'Page 3' },
+                  {
+                    href: '#', text: 'Page 4',
+                    secondLevelArr: [
+                      { href: '#', text: 'Page A' },
+                      {
+                        href: '#', text: 'Page B section landing', isLanding: true,
+                        thirdLevelArr: [
+                          { href: '#', text: 'Page B-1', isActive: true },
+                          { href: '#', text: 'Page B-2' },
+                        ]
+                      },
+                    ]
+                  },
+                  { href: '#', text: 'Page 5' },
+                ]}
+              />
+              <h3>Accordion List</h3>
+              <SideNavigation
+                type={'accordion'}
+                contentArr={[
+                  { href: '#', text: 'Page 1' },
+                  {
+                    href: '#', text: 'Page 2', isOpen: true,
+                    secondLevelArr: [
+                      { href: '#', text: 'Page A' },
+                      { href: '#', text: 'Page B' }
+                    ]
+                  },
+                  { href: '#', text: 'Page 3' },
+                  { href: '#', text: 'Page 4' },
+                  { href: '#', text: 'Page 5' },
+                ]}
+              />
             </div>
             <hr />
             <div>
