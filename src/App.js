@@ -1,6 +1,6 @@
 // Sample images
 import testAvatar from './components/Blockquote/blockquote-with-image.jpg';
-import bannerImage from './patterns/Banner/main-banner10.jpg';
+import bannerImage from './patterns/Banner/main-banner.svg';
 import featureBannerImage from './patterns/Banner/ocean.jpg';
 import cardImage from './patterns/Card/card-image.jpg';
 import parallaxImage1 from './components/Parallax/background-primary.jpg';
@@ -60,12 +60,37 @@ function App() {
       <div className={'main-content'} id={'main-content'}>
         <main id={'main'} className={'main-primary'}>
           <Banner
-            titleText={'Hello world!'}
-            bodyText={'Use the State template with React.'}
-            buttonText={'Explore code'}
+            bodyText={'Enhance your websites and applications with the latest version (V6) of the State Template using ReactJS!'}
             buttonHref={'https://github.com/Office-of-Digital-Services/California-State-Web-Template-react'}
+            buttonText={'Explore code'}
             imageSrc={bannerImage}
+            titleText={'Hello world!'}
+          // type={'feature'}
           />
+          <div style={{ background: '#cccccc' }}>
+            <div className={'container p-t-lg'}>
+              <CardGrid
+                contentArr={[
+                  {
+                    bodyText: 'Body goes here',
+                    icon: 'ca-gov-icon-accessibility',
+                    titleText: 'Title Goes Here'
+                  },
+                  {
+                    bodyText: 'Body goes here',
+                    icon: 'ca-gov-icon-audience',
+                    titleText: 'Title Goes Here'
+                  },
+                  {
+                    bodyText: 'Body goes here',
+                    icon: 'ca-gov-icon-book',
+                    titleText: 'Title Goes Here'
+                  }
+                ]}
+              />
+            </div>
+          </div>
+
         </main>
       </div>
     </>
