@@ -135,7 +135,6 @@ const Header = () => {
             contentArr={[
               { href: '#main-content', text: 'Components' },
               { href: '#patterns', text: 'Patterns' },
-              { href: '#structure', text: 'Structure' },
               { href: '#get-started', text: 'CSS Shortcuts' }
             ]}
           />
