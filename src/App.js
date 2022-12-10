@@ -29,6 +29,7 @@ import Modal from './components/Modal/Modal';
 import NumberCounter from './components/NumberCounter/NumberCounter';
 import Parallax from './components/Parallax/Parallax';
 import ProgressBar from './components/ProgressBar/ProgressBar';
+import SideNavigation from './components/SideNavigation/SideNavigation';
 import SocialMediaIcons from './components/SocialMediaIcons/SocialMediaIcons';
 import Table from './components/Table/Table';
 import Tabs from './components/Tabs/Tabs';
@@ -381,6 +382,61 @@ function App() {
             </div>
             <hr />
             <div>
+              <h2>Side Navigation</h2>
+              <h3>Single-Level List</h3>
+              <SideNavigation
+                contentArr={[
+                  { href: '#', text: 'Landing page', isActive: true, isLanding: true },
+                  { href: '#', text: 'Page 1' },
+                  { href: '#', text: 'Page 2' },
+                  { href: '#', text: 'Page 3' },
+                  { href: '#', text: 'Page 4' },
+                  { href: '#', text: 'Page 5' },
+                ]}
+              />
+              <h3>Multi-Level List</h3>
+              <SideNavigation
+                type={'multi'}
+                contentArr={[
+                  { href: '#', text: 'Page 1' },
+                  { href: '#', text: 'Page 2' },
+                  { href: '#', text: 'Page 3' },
+                  {
+                    href: '#', text: 'Page 4',
+                    secondLevelArr: [
+                      { href: '#', text: 'Page A' },
+                      {
+                        href: '#', text: 'Page B section landing', isLanding: true,
+                        thirdLevelArr: [
+                          { href: '#', text: 'Page B-1', isActive: true },
+                          { href: '#', text: 'Page B-2' },
+                        ]
+                      },
+                    ]
+                  },
+                  { href: '#', text: 'Page 5' },
+                ]}
+              />
+              <h3>Accordion List</h3>
+              <SideNavigation
+                type={'accordion'}
+                contentArr={[
+                  { href: '#', text: 'Page 1' },
+                  {
+                    href: '#', text: 'Page 2', isOpen: true,
+                    secondLevelArr: [
+                      { href: '#', text: 'Page A' },
+                      { href: '#', text: 'Page B' }
+                    ]
+                  },
+                  { href: '#', text: 'Page 3' },
+                  { href: '#', text: 'Page 4' },
+                  { href: '#', text: 'Page 5' },
+                ]}
+              />
+            </div>
+            <hr />
+            <div>
               <h2>Social Media Icons</h2>
               <SocialMediaIcons
                 contentArr={[
@@ -418,15 +474,18 @@ function App() {
             <hr />
             <div>
               <h2>Table</h2>
+              <h3>Basic</h3>
               <Table
                 headerArr={['#', 'First Name', 'Last Name', 'Username']}
                 rowArr={[['1', 'Mark', 'Otto', '@mdo'], ['2', 'Jacob', 'Thornton', '@jthornton'], ['3', 'Larry', 'the Bird', '@twitter']]}
               />
+              <h3>Shaded</h3>
               <Table
                 type={'shaded'}
                 headerArr={['#', 'First Name', 'Last Name', 'Username']}
                 rowArr={[['1', 'Mark', 'Otto', '@mdo'], ['2', 'Jacob', 'Thornton', '@jthornton'], ['3', 'Larry', 'the Bird', '@twitter']]}
               />
+              <h3>Zebra</h3>
               <Table
                 type={'zebra'}
                 headerArr={['#', 'First Name', 'Last Name', 'Username']}
@@ -911,7 +970,7 @@ function App() {
                 }
               />
             </div>
-            <hr id={'structure'} />
+            <hr/>
             <div>
               <h2 id={'get-started'}>CSS Shortcuts</h2>
               <h3>Gradient Backgrounds</h3>
