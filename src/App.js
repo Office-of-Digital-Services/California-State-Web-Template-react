@@ -90,6 +90,28 @@ function App() {
               />
             </div>
           </div>
+          <div class="container mb-2">
+          <h2>Get started now</h2>
+          <p>The State Template is now available in ReactJS! <br />Start developing with dynamic components.</p>
+            <ProgressTracker 
+              type={'horizontal'}
+              currentStep={1}
+              contentArr={[
+                {
+                  title: 'Step 1',
+                  body: 'Download React State Template'
+                },
+                {
+                  title: 'Step 2',
+                  body: 'Check out component examples'
+                },
+                {
+                  title: 'Step 3',
+                  body: 'Build amazing things'
+                }
+              ]}
+            />
+          </div>
 
         </main>
       </div>
