@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/California-State-Web-Template-react/static/css/main.e6c13ad2.css",
+    "main.js": "/California-State-Web-Template-react/static/js/main.c921052b.js",
+    "static/js/787.047c0072.chunk.js": "/California-State-Web-Template-react/static/js/787.047c0072.chunk.js",
+    "static/media/ocean.jpg": "/California-State-Web-Template-react/static/media/ocean.e6a3c9c9213fe3d3c44e.jpg",
+    "static/media/main-banner4.jpg": "/California-State-Web-Template-react/static/media/main-banner4.3769e429d34e70a1e108.jpg",
+    "static/media/card-image.jpg": "/California-State-Web-Template-react/static/media/card-image.5c0ca53bf605e37a07b4.jpg",
+    "static/media/background-primary.jpg": "/California-State-Web-Template-react/static/media/background-primary.0d4c44993ae4ba38199a.jpg",
+    "static/media/main-banner10.jpg": "/California-State-Web-Template-react/static/media/main-banner10.65fd0d9c46c4375672b6.jpg",
+    "static/media/sunflower2.jpg": "/California-State-Web-Template-react/static/media/sunflower2.d96ac90b2f0536236899.jpg",
+    "static/media/bg-open-data.jpg": "/California-State-Web-Template-react/static/media/bg-open-data.5f1aef6d3ef20529ec21.jpg",
+    "static/media/sunflower1.jpg": "/California-State-Web-Template-react/static/media/sunflower1.bb31997dd4ac595d4449.jpg",
+    "static/media/sunflower3.jpg": "/California-State-Web-Template-react/static/media/sunflower3.984921409a2e5cc7d6c8.jpg",
+    "static/media/blockquote-with-image.jpg": "/California-State-Web-Template-react/static/media/blockquote-with-image.2a97bc63921a31a9551a.jpg",
+    "static/media/Ca-Gov-Logo-Gold.svg": "/California-State-Web-Template-react/static/media/Ca-Gov-Logo-Gold.b5163ca0410170f61c6dc3046a6cba29.svg",
+    "index.html": "/California-State-Web-Template-react/index.html",
+    "main.e6c13ad2.css.map": "/California-State-Web-Template-react/static/css/main.e6c13ad2.css.map",
+    "main.c921052b.js.map": "/California-State-Web-Template-react/static/js/main.c921052b.js.map",
+    "787.047c0072.chunk.js.map": "/California-State-Web-Template-react/static/js/787.047c0072.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c921052b.js"
+  ]
+}
