@@ -154,9 +154,10 @@ const Header = () => {
           <SiteNavigation
             type={'single'}
             contentArr={[
-              { href: '#main-content', text: 'Components' },
-              { href: '#patterns', text: 'Patterns' },
-              { href: '#get-started', text: 'CSS Shortcuts' }
+              { href: '#', text: 'Nav Link 1' },
+              { href: '#', text: 'Nav Link 2' },
+              { href: '#', text: 'Nav Link 3' },
+              { href: '#', text: 'Nav Link 4' }
             ]}
           />
 
