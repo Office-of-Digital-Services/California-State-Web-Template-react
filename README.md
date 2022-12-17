@@ -13,4 +13,4 @@ Quickly begin development with three easy steps:
 <p>You should now see the "Hello world!" example page running on localhost:3000</p>
 
 ## View Examples
-<p>Check out working examples of each State Template React element here: https://office-of-digital-services.github.io/California-State-Web-Template-react/</p>
+<p>Check out examples of each State Template React element here: https://office-of-digital-services.github.io/California-State-Web-Template-react/</p>
