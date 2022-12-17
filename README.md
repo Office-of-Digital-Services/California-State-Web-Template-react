@@ -5,6 +5,8 @@ This is the simple and lightweight California State Web Template version using t
 Quickly begin development with three easy steps:
 <ol>
 <li>Clone the repository to your local machine.</li>
+
+
 <li>Run <code>npm install</code> from the command line.</li>
 <li>Run <code>npm start</code> from the command line.</li>
 </ol>
