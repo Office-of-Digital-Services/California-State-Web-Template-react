@@ -42,7 +42,7 @@ function App() {
               />
             </div>
           </div>
-          <div class="container mb-2">
+          <div className="container mb-2">
           <h2>Get started now</h2>
           <p>The State Template is now available in ReactJS! <br />Start developing with dynamic components.</p>
             <ProgressTracker 

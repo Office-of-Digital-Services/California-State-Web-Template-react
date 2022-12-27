@@ -5,7 +5,7 @@ import SiteFooter from '../SiteFooter/SiteFooter';
 const Footer = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://california.azureedge.net/cdt/statetemplate/6.0.8/js/cagov.core.js";
+    script.src = "https://california.azureedge.net/cdt/statetemplate/6.1.0/js/cagov.core.js";
     script.async = true;
 
     document.body.appendChild(script);
