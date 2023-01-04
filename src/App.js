@@ -6,8 +6,6 @@ import Banner from './patterns/Banner/Banner';
 import CardGrid from './patterns/CardGrid/CardGrid';
 import ProgressTracker from './patterns/ProgressTracker/ProgressTracker';
 
-import Accordion from './components/Accordion/Accordion';
-
 function App() {
 
   return (
