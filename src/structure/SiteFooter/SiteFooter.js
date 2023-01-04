@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const SiteFooter = ({
   contentArr = [
@@ -42,6 +43,10 @@ const SiteFooter = ({
       </div>
     </aside>
   )
+}
+
+SiteFooter.propTypes = {
+  contentArr: PropTypes.array.isRequired
 }
 
 export default SiteFooter

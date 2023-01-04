@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const TextField = ({ id, placeholder, labelText, isRequired }) => {
   return (
@@ -16,6 +17,13 @@ const TextField = ({ id, placeholder, labelText, isRequired }) => {
       }
     </>
   )
+}
+
+TextField.propTypes = {
+  id: PropTypes.string.isRequired,
+  isRequired: PropTypes.bool,
+  labelText: PropTypes.string.isRequired,
+  placeholder: PropTypes.string
 }
 
 export default TextField

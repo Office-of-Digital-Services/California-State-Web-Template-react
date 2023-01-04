@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Megamenu from './Megamenu';
 import NavigationDropdownMenu from './NavigationDropdownMenu';
 import SingleLevelMenu from './SingleLevelMenu';
@@ -21,6 +22,11 @@ const SiteNavigation = ({ type, contentArr }) => {
   return (
     <div>{setType(type)}</div>
   )
+}
+
+SiteNavigation.propTypes = {
+  contentArr: PropTypes.array.isRequired,
+  type: PropTypes.string.isRequired
 }
 
 export default SiteNavigation

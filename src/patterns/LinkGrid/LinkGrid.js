@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const LinkGrid = ({ linkArr }) => {
   return (
@@ -12,6 +13,10 @@ const LinkGrid = ({ linkArr }) => {
       })}
     </div>
   )
+}
+
+LinkGrid.propTypes = {
+  linkArr: PropTypes.array.isRequired
 }
 
 export default LinkGrid

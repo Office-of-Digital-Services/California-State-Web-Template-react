@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Breadcrumb = ({ breadcrumbArr, currentPage }) => {
   return (
@@ -15,6 +16,11 @@ const Breadcrumb = ({ breadcrumbArr, currentPage }) => {
       </ol>
     </nav>
   )
+}
+
+Breadcrumb.propTypes = {
+  breadcrumbArr: PropTypes.array.isRequired,
+  currentPage: PropTypes.string.isRequired
 }
 
 export default Breadcrumb

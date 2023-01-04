@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Button = ({ href, buttonSize, buttonType, buttonText, disabled }) => {
   return (
@@ -10,6 +11,14 @@ const Button = ({ href, buttonSize, buttonType, buttonText, disabled }) => {
       }
     </>
   )
+}
+
+Button.propTypes = {
+  buttonSize: PropTypes.string,
+  buttonText: PropTypes.string.isRequired,
+  buttonType: PropTypes.string,
+  disabled: PropTypes.bool,
+  href: PropTypes.string
 }
 
 export default Button

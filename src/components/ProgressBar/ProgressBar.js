@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const ProgressBar = ({ percentComplete }) => {
   return (
@@ -8,6 +9,10 @@ const ProgressBar = ({ percentComplete }) => {
       </div>
     </div>
   )
+}
+
+ProgressBar.propTypes = {
+  percentComplete: PropTypes.number.isRequired
 }
 
 export default ProgressBar

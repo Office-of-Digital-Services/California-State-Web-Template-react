@@ -6,6 +6,8 @@ import Banner from './patterns/Banner/Banner';
 import CardGrid from './patterns/CardGrid/CardGrid';
 import ProgressTracker from './patterns/ProgressTracker/ProgressTracker';
 
+import Accordion from './components/Accordion/Accordion';
+
 function App() {
 
   return (
@@ -19,6 +21,12 @@ function App() {
             imageSrc={bannerImage}
             titleText={'Hello world!'}
           />
+          <div className="container">
+            <Accordion 
+              contentArr={['Test']}
+              summaryStr={'Test Summary'}
+            />
+          </div>
           <div style={{ background: '#cccccc' }}>
             <div className={'container p-t-lg'}>
               <CardGrid

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const SocialMediaIcons = ({ contentArr }) => {
 
@@ -32,6 +33,10 @@ const SocialMediaIcons = ({ contentArr }) => {
       {contentArr.map((item, idx) => <a key={`smi-a-item${idx}`} className={setClassName(item.type)} title={`${capitalizeFirstLetter(item.type)} Link`} href={item.href}><span className='external-link-icon' aria-hidden='true'></span></a>)}
     </div>
   )
+}
+
+SocialMediaIcons.propTypes = {
+  contentArr: PropTypes.array.isRequired
 }
 
 export default SocialMediaIcons

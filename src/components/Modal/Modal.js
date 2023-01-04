@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Modal = ({ headingText, bodyText }) => {
   return (
@@ -20,6 +21,11 @@ const Modal = ({ headingText, bodyText }) => {
       </div>
     </div>
   )
+}
+
+Modal.propTypes = {
+  bodyText: PropTypes.string.isRequired,
+  headingText: PropTypes.string.isRequired
 }
 
 export default Modal

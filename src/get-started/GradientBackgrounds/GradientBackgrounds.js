@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const GradientBackgrounds = ({ type }) => {
   const setType = (t) => {
@@ -44,6 +45,10 @@ const GradientBackgrounds = ({ type }) => {
   return (
     <div className={`container height-300 ${setType(type)}`}></div>
   )
+}
+
+GradientBackgrounds.propTypes = {
+  type: PropTypes.string
 }
 
 export default GradientBackgrounds

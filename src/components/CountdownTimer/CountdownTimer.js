@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const CountdownTimer = ({ dateStr, isDefaultColor = false }) => {
   // Set the date we're counting down to
@@ -58,6 +59,11 @@ const CountdownTimer = ({ dateStr, isDefaultColor = false }) => {
       </div>
     </div>
   )
+}
+
+CountdownTimer.propTypes = {
+  dateStr: PropTypes.string.isRequired,
+  isDefaultColor: PropTypes.bool
 }
 
 export default CountdownTimer

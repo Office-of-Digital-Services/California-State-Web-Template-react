@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Alert = ({ alertLevel, alertText, buttonHref = '', buttonText }) => {
   return (
@@ -22,6 +23,13 @@ const Alert = ({ alertLevel, alertText, buttonHref = '', buttonText }) => {
       </div>
     </div>
   )
+}
+
+Alert.propTypes = {
+  alertLevel: PropTypes.string.isRequired,
+  alertText: PropTypes.string.isRequired,
+  buttonHref: PropTypes.string,
+  buttonText: PropTypes.string
 }
 
 export default Alert

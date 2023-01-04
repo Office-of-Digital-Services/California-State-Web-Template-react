@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const RadioButton = ({ radioName, radioText, radioValue, id }) => {
   return (
@@ -9,6 +10,13 @@ const RadioButton = ({ radioName, radioText, radioValue, id }) => {
       </label>
     </div>
   )
+}
+
+RadioButton.propTypes = {
+  id: PropTypes.string.isRequired,
+  radioName: PropTypes.string.isRequired,
+  radioText: PropTypes.string.isRequired,
+  radioValue: PropTypes.string.isRequired
 }
 
 export default RadioButton

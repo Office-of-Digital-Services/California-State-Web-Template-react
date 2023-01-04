@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const FileInput = ({ id, labelText, feedbackText }) => {
   return (
@@ -10,6 +11,12 @@ const FileInput = ({ id, labelText, feedbackText }) => {
       <div className={'feedback small'}>{feedbackText}</div>
     </>
   )
+}
+
+FileInput.propTypes = {
+  id: PropTypes.string.isRequired,
+  feedbackText: PropTypes.string.isRequired,
+  labelText: PropTypes.string.isRequired
 }
 
 export default FileInput

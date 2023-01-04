@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import HorizontalTracker from './HorizontalTracker';
 import VerticalTracker from './VerticalTracker';
 import StepList from './StepList';
@@ -21,6 +22,12 @@ const ProgressTracker = ({ type, contentArr, currentStep }) => {
   return (
     <div>{content}</div>
   )
+}
+
+ProgressTracker.propTypes = {
+  contentArr: PropTypes.array.isRequired,
+  currentStep: PropTypes.number,
+  type: PropTypes.string.isRequired
 }
 
 export default ProgressTracker
