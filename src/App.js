@@ -21,12 +21,6 @@ function App() {
             imageSrc={bannerImage}
             titleText={'Hello world!'}
           />
-          <div className="container">
-            <Accordion 
-              contentArr={['Test']}
-              summaryStr={'Test Summary'}
-            />
-          </div>
           <div style={{ background: '#cccccc' }}>
             <div className={'container p-t-lg'}>
               <CardGrid
