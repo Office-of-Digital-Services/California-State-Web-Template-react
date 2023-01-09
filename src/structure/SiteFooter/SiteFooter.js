@@ -1,30 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SiteFooter = ({
-  contentArr = [
-    {
-      title: 'Column Title',
-      linkArr: [
-        { href: '#', title: 'Link title' },
-        { href: '#', title: 'Link title' },
-      ]
-    },
-    {
-      title: 'Column Title',
-      linkArr: [
-        { href: '#', title: 'Link title' },
-        { href: 'https://cdt.ca.gov/', title: 'External link title' },
-      ]
-    },
-    {
-      title: 'Column Title',
-      linkArr: [
-        { href: '#', title: 'Link title' },
-        { href: '#', title: 'Link title' }
-      ]
-    }
-  ] }) => {
+const SiteFooter = ({ contentArr }) => {
   return (
     <aside className="p-b-md p-t-sm section-standout site-footer">
       <div className="container">
