@@ -4,7 +4,7 @@ const HorizontalTracker = ({ contentArr, currentStep }) => {
 
   const setClass = (index) => {
     // Can probably be refactored :)
-    if (index === 0 && currentStep !== contentArr.length && currentStep !== 1) {
+    if (index === 0 && currentStep !== 1) {
       index = 'otherstart';
     }
     if (index === currentStep - 1 && currentStep !== contentArr.length && currentStep === 1) {
