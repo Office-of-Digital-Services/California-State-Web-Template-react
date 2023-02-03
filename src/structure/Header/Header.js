@@ -3,11 +3,7 @@ import Logo from './Ca-Gov-Logo-Gold.svg';
 import SiteHeader from '../SiteHeader/SiteHeader';
 import MobileControls from '../MobileControls/MobileControls';
 import ActiveSearch from '../Search/ActiveSearch';
-import SingleLevelMenu from '../SiteNavigation/SingleLevelMenu';
 import SiteNavigation from '../SiteNavigation/SiteNavigation';
-import NavigationDropdownMenu from '../SiteNavigation/NavigationDropdownMenu';
-import Megamenu from '../SiteNavigation/Megamenu';
-import IconMenu from '../SiteNavigation/IconMenu';
 
 const Header = () => {
   return (
@@ -84,33 +80,10 @@ const Header = () => {
         <MobileControls />
 
         <div className="navigation-search full-width-nav container">
-          {/* <IconMenu /> */}
           <div id="head-search" className="search-container featured-search">
             <ActiveSearch />
           </div>
-          {/* <Megamenu
-            contentArr={[
-              {
-                hasBorder: false,
-                navHeader: 'Testing',
-                navBodyArr: [
-                  { title: 'Site 1', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
-                  { title: 'Site 2', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
-                  { title: 'Site 3', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' }
-                ]
-              },
-              {
-                hasBorder: true,
-                navHeader: 'Testing',
-                navBodyArr: [
-                  { title: 'Site 1', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
-                  { title: 'Site 2', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
-                  { title: 'Site 3', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' }
-                ]
-              }
-            ]}
-          /> */}
-          <SiteNavigation 
+          <SiteNavigation
             type={'dropdown'}
             contentArr={[
               { href: '/template-updates', navHeader: 'Template updates' },
@@ -128,23 +101,6 @@ const Header = () => {
               { href: '/patterns', navHeader: 'Patterns' }
             ]}
           />
-          {/* <NavigationDropdownMenu
-            contentArr={[
-              { href: '/template-updates', navHeader: 'Template updates' },
-              { href: '/get-started', navHeader: 'Get started' },
-              { href: '/structure', navHeader: 'Structure' },
-              {
-                navHeader: 'Visual design',
-                navBodyArr: [
-                  { title: 'Color', href: '/visual-design/color' },
-                  { title: 'Icons', href: '/visual-design/icons' },
-                  { title: 'Typography', href: '/visual-design/typography' }
-                ]
-              },
-              { href: '/components', navHeader: 'Components' },
-              { href: '/patterns', navHeader: 'Patterns' }
-            ]}
-          /> */}
         </div>
       </header>
     </>

@@ -18,7 +18,7 @@ const NavigationDropdownMenu = ({ contentArr }) => {
   }
 
   return (
-    <nav id="navigation" className="main-navigation dropdown nav" data-multiselectable={false} data-nav-id={'navdropdownmenu-nav-id'} aria-label="Main navigation">
+    <nav id="navigation" className="main-navigation dropdown nav" data-multiselectable={false} data-nav-id={''} aria-label="Main navigation">
       <ul id="nav_list" className="top-level-nav">
 
         {contentArr.map((item, idx) => (
@@ -27,12 +27,12 @@ const NavigationDropdownMenu = ({ contentArr }) => {
             {item.href ? <a className={'first-level-link'} href={item.href}>{item.navHeader}</a> :
               <>
                 <div className={'has-sub-btn'}>
-                  <button onClick={handleToggle} id={`navheader_tab${idx}`} className={'first-level-btn nav-header has-sub'} aria-expanded={false} aria-controls={`navheader_panel${idx}`} data-nav-id={'navdropdownmenu-nav-id'}>
+                  <button onClick={handleToggle} id={`navheader_tab${idx}`} className={'first-level-btn nav-header has-sub'} aria-expanded={false} aria-controls={`navheader_panel${idx}`} data-nav-id={''}>
                     {item.navHeader}
                   </button>
                 </div>
 
-                <div className="sub-nav" id={`navheader_panel${idx}`} role={'tabpanel'} aria-labelledby={`navheader_tab${idx}`} data-nav-id={'navdropdownmenu-nav-id'} aria-hidden={true}>
+                <div className="sub-nav" id={`navheader_panel${idx}`} role={'tabpanel'} aria-labelledby={`navheader_tab${idx}`} data-nav-id={''} aria-hidden={true}>
                   <ul className="second-level-nav">
                     {item.navBodyArr.map((navItem, navIdx) => (
                       <li className="unit1" key={`ndm-nav-list-item${navIdx}`}>
