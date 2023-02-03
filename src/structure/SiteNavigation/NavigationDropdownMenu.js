@@ -18,7 +18,7 @@ const NavigationDropdownMenu = ({ contentArr }) => {
   }
 
   return (
-    <nav id="navigation" className="main-navigation dropdown nav" data-multiselectable={false} data-nav-id={'navdropdownmenu-nav-id'}>
+    <nav id="navigation" className="main-navigation dropdown nav" data-multiselectable={false} data-nav-id={'navdropdownmenu-nav-id'} aria-label="Main navigation">
       <ul id="nav_list" className="top-level-nav">
 
         {contentArr.map((item, idx) => (

@@ -3,7 +3,11 @@ import Logo from './Ca-Gov-Logo-Gold.svg';
 import SiteHeader from '../SiteHeader/SiteHeader';
 import MobileControls from '../MobileControls/MobileControls';
 import ActiveSearch from '../Search/ActiveSearch';
+import SingleLevelMenu from '../SiteNavigation/SingleLevelMenu';
 import SiteNavigation from '../SiteNavigation/SiteNavigation';
+import NavigationDropdownMenu from '../SiteNavigation/NavigationDropdownMenu';
+import Megamenu from '../SiteNavigation/Megamenu';
+import IconMenu from '../SiteNavigation/IconMenu';
 
 const Header = () => {
   return (
@@ -25,16 +29,21 @@ const Header = () => {
             </div>
           </div>
         </div>
+
         <div className="site-settings section collapse collapsed" id="siteSettings">
           <div className="container p-y">
+
             <div className="settings-bar-buttons">
+
               <div className="btn-group" aria-label="contrastMode">
                 <button type="button"
                   className="btn btn-default btn-lg bg-transparent bg-s1-hover disableHighContrastMode">Reset</button>
               </div>
+
               <div className="btn-group"><button type="button" className="btn btn-s1 btn-lg brd-s1 enableHighContrastMode">High
                 contrast</button>
               </div>
+
               <div className="btn-group">
                 <button type="button" className="btn btn-s1 btn-lg brd-s1 increaseTextSize">
                   <span className="hidden-xs">Increase font size</span>
@@ -44,6 +53,7 @@ const Header = () => {
                   </span>
                 </button>
               </div>
+
               <div className="btn-group">
                 <button type="button" className="btn btn-s1 btn-lg brd-s1 decreaseTextSize">
                   <span className="hidden-xs">Decrease font size</span>
@@ -52,44 +62,89 @@ const Header = () => {
                   </span>
                 </button>
               </div>
+
               <div className="btn-group">
                 <button type="button" className="btn btn-s1 btn-lg brd-s1 dyslexicFont">Dyslexic font</button>
               </div>
+
               <button type="button" className="close ms-auto" data-bs-toggle="collapse" data-bs-target="#siteSettings"
                 aria-label="Close">
                 <span aria-hidden="true" className=" ca-gov-icon-close-mark"></span>
               </button>
+
             </div>
           </div>
         </div>
 
         <SiteHeader
           stateText={'State of California'}
-          departmentText={'Web Template'}
+          departmentText={'React Web Template'}
         />
 
         <MobileControls />
 
         <div className="navigation-search full-width-nav container">
+          {/* <IconMenu /> */}
           <div id="head-search" className="search-container featured-search">
             <ActiveSearch />
           </div>
-          <SiteNavigation
-            type={'dropdown'}
+          {/* <Megamenu
             contentArr={[
-              { href: '#', navHeader: 'Nav Link 1' },
-              { href: '#', navHeader: 'Nav Link 2' },
               {
-                navHeader: 'Nav Link 3',
+                hasBorder: false,
+                navHeader: 'Testing',
                 navBodyArr: [
-                  { title: 'Page 3-1', href: '#' },
-                  { title: 'Page 3-2', href: '#' },
-                  { title: 'Page 3-3', href: '#' }
+                  { title: 'Site 1', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
+                  { title: 'Site 2', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
+                  { title: 'Site 3', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' }
                 ]
               },
-              { href: '#', navHeader: 'Nav Link 4' },
+              {
+                hasBorder: true,
+                navHeader: 'Testing',
+                navBodyArr: [
+                  { title: 'Site 1', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
+                  { title: 'Site 2', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' },
+                  { title: 'Site 3', href: 'www.google.com', body: 'Test body', icon: 'ca-gov-icon-online-services' }
+                ]
+              }
+            ]}
+          /> */}
+          <SiteNavigation 
+            type={'dropdown'}
+            contentArr={[
+              { href: '/template-updates', navHeader: 'Template updates' },
+              { href: '/get-started', navHeader: 'Get started' },
+              { href: '/structure', navHeader: 'Structure' },
+              {
+                navHeader: 'Visual design',
+                navBodyArr: [
+                  { title: 'Color', href: '/visual-design/color' },
+                  { title: 'Icons', href: '/visual-design/icons' },
+                  { title: 'Typography', href: '/visual-design/typography' }
+                ]
+              },
+              { href: '/components', navHeader: 'Components' },
+              { href: '/patterns', navHeader: 'Patterns' }
             ]}
           />
+          {/* <NavigationDropdownMenu
+            contentArr={[
+              { href: '/template-updates', navHeader: 'Template updates' },
+              { href: '/get-started', navHeader: 'Get started' },
+              { href: '/structure', navHeader: 'Structure' },
+              {
+                navHeader: 'Visual design',
+                navBodyArr: [
+                  { title: 'Color', href: '/visual-design/color' },
+                  { title: 'Icons', href: '/visual-design/icons' },
+                  { title: 'Typography', href: '/visual-design/typography' }
+                ]
+              },
+              { href: '/components', navHeader: 'Components' },
+              { href: '/patterns', navHeader: 'Patterns' }
+            ]}
+          /> */}
         </div>
       </header>
     </>
