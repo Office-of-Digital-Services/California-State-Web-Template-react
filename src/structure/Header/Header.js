@@ -86,19 +86,18 @@ const Header = () => {
           <SiteNavigation
             type={'dropdown'}
             contentArr={[
-              { href: '/template-updates', navHeader: 'Template updates' },
-              { href: '/get-started', navHeader: 'Get started' },
-              { href: '/structure', navHeader: 'Structure' },
+              { href: '#', navHeader: 'Nav Link 1' },
+              { href: '#', navHeader: 'Nav Link 2' },
               {
-                navHeader: 'Visual design',
+                navHeader: 'Nav Link 3',
                 navBodyArr: [
-                  { title: 'Color', href: '/visual-design/color' },
-                  { title: 'Icons', href: '/visual-design/icons' },
-                  { title: 'Typography', href: '/visual-design/typography' }
+                  // Using # as the href in a second-level-link will add the .bold class to the title
+                  { title: 'Dropdown Link 3-1', href: '/second-level-link' },
+                  { title: 'Dropdown Link 3-2', href: '/second-level-link' },
+                  { title: 'Dropdown Link 3-3', href: '/second-level-link' }
                 ]
               },
-              { href: '/components', navHeader: 'Components' },
-              { href: '/patterns', navHeader: 'Patterns' }
+              { href: '#', navHeader: 'Nav Link 4' },
             ]}
           />
         </div>
