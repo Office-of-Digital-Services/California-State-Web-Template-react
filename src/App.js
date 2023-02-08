@@ -245,7 +245,7 @@ function App() {
             <h2>Countdown Timer</h2>
             <div>
               <CountdownTimer
-                dateStr={'Jan 1, 2023 00:00:00'}
+                dateStr={'Jan 1, 2024 00:00:00'}
               />
             </div>
             <hr />
