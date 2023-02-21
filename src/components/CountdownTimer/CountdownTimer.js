@@ -1,6 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * @summary Countdown to target date.
+ * @see https://github.com/Office-of-Digital-Services/California-State-Web-Template-react/wiki/Components#countdown-timer
+ * 
+ * @example
+ * \\ Countdown to January 1st 2024 12am
+ * <CountdownTimer
+     dateStr={'Jan 1, 2024 00:00:00'}
+     isDefaultColor={false}
+   />
+ * 
+ * @param {string} dateStr - Set countdown target date. Works with ISO-8601 formats.
+ * @param {boolean} [isDefaultColor=false] - Set countdown timer color to default or primary.
+ * @returns {React.ReactElement} Returns the CountdownTimer component
+ */
+
 const CountdownTimer = ({ dateStr, isDefaultColor = false }) => {
   // Set the date we're counting down to
   const countDownDate = new Date(dateStr).getTime();

@@ -1,6 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * 
+ * @param {string} id - Id for dropdown menu
+ * @param {string} labelText - Text to display in dropdown menu label
+ * @param {string[]} optionsArr - Array of objects containing text and value keys
+ * @param {string} optionsArr.text - Text to display in dropdown content
+ * @param {string} optionsArr.value - Value to display for dropdown content
+ * @returns 
+ */
+
 const DropdownMenu = ({ id, labelText, optionsArr }) => {
   return (
     <>

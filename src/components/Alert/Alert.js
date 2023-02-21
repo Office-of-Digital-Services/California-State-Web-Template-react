@@ -1,8 +1,27 @@
+//@ts-check
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Alert = ({ alertLevel, alertText, buttonHref = '', buttonText }) => {
-  return (
+/**
+ * @summary Dismissable alert banner 
+ * @see https://github.com/Office-of-Digital-Services/California-State-Web-Template-react/wiki/Components#alert
+ * 
+ * @example 
+ * // Generates an info level alert with text and button containing link
+ * <Alert
+ *   alertLevel={'info'}
+ *   alertText={'We\'ve made some changes that might impact your experience.'}
+ *   buttonHref={'https://google.com'}
+ *   buttonText={'Learn more'}
+ * />
+ * 
+ * @param {{ alertLevel:string, alertText:string, buttonHref:string, buttonText:string }} params
+ * @returns {React.ReactElement} Returns the Alert component
+ */
+
+
+ const Alert = ({ alertLevel, alertText, buttonHref = '', buttonText }) => (
     <div className={`alert alert-${alertLevel} alert-dismissible alert-banner`} role={'alert'}>
       <div className={'container'}>
         <button type={'button'} className={'close ms-lg-auto'} data-bs-dismiss={'alert'} aria-label={'Close'}>
@@ -23,7 +42,6 @@ const Alert = ({ alertLevel, alertText, buttonHref = '', buttonText }) => {
       </div>
     </div>
   )
-}
 
 Alert.propTypes = {
   alertLevel: PropTypes.string.isRequired,
