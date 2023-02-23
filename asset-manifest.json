@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/California-State-Web-Template-react/static/css/main.e6c13ad2.css",
-    "main.js": "/California-State-Web-Template-react/static/js/main.ea681e0b.js",
+    "main.js": "/California-State-Web-Template-react/static/js/main.6774b98b.js",
     "static/js/787.047c0072.chunk.js": "/California-State-Web-Template-react/static/js/787.047c0072.chunk.js",
     "static/media/ocean.jpg": "/California-State-Web-Template-react/static/media/ocean.e6a3c9c9213fe3d3c44e.jpg",
     "static/media/main-banner4.jpg": "/California-State-Web-Template-react/static/media/main-banner4.3769e429d34e70a1e108.jpg",
@@ -14,13 +14,16 @@
     "static/media/sunflower3.jpg": "/California-State-Web-Template-react/static/media/sunflower3.984921409a2e5cc7d6c8.jpg",
     "static/media/blockquote-with-image.jpg": "/California-State-Web-Template-react/static/media/blockquote-with-image.2a97bc63921a31a9551a.jpg",
     "static/media/Ca-Gov-Logo-Gold.svg": "/California-State-Web-Template-react/static/media/Ca-Gov-Logo-Gold.b5163ca0410170f61c6dc3046a6cba29.svg",
+    "static/media/alert-success.svg": "/California-State-Web-Template-react/static/media/alert-success.77c21977f47d28a1d2234bc65daa7857.svg",
     "index.html": "/California-State-Web-Template-react/index.html",
+    "static/media/alert-warning-diamond.svg": "/California-State-Web-Template-react/static/media/alert-warning-diamond.3dae3d13382fe7be23c2eae50b7b419c.svg",
+    "static/media/alert-info.svg": "/California-State-Web-Template-react/static/media/alert-info.39fa2c2db8917d3cd88e9d2e5b26a870.svg",
     "main.e6c13ad2.css.map": "/California-State-Web-Template-react/static/css/main.e6c13ad2.css.map",
-    "main.ea681e0b.js.map": "/California-State-Web-Template-react/static/js/main.ea681e0b.js.map",
+    "main.6774b98b.js.map": "/California-State-Web-Template-react/static/js/main.6774b98b.js.map",
     "787.047c0072.chunk.js.map": "/California-State-Web-Template-react/static/js/787.047c0072.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.ea681e0b.js"
+    "static/js/main.6774b98b.js"
   ]
 }
