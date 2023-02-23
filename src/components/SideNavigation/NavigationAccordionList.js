@@ -16,16 +16,16 @@ const NavigationAccordionList = ({ contentArr }) => {
 
   return (
     <nav aria-labelledby="components-list">
-      <div class="sr-only" id="components-list">Accordion side navigation</div>
+      <div className="sr-only" id="components-list">Accordion side navigation</div>
       {contentArr.map((item, idx) => (
         item.secondLevelArr ?
-          <cagov-accordion class="sidenav">
+          <cagov-accordion className="sidenav" key={`nal-accordion${idx}`}>
             <details open={item.isOpen}>
-              <summary class="active">{item.text}</summary>
-              <div class="accordion-body">
-                <ul class="side-subnav">
+              <summary className="active">{item.text}</summary>
+              <div className="accordion-body">
+                <ul className="side-subnav">
                   {item.secondLevelArr.map((secondLevelItem, secondLevelIdx) => (
-                    <li>
+                    <li key={`nal-li-item${secondLevelIdx}`}>
                       <a href={secondLevelItem.href}>{secondLevelItem.text}</a>
                     </li>
                   ))}
@@ -33,7 +33,7 @@ const NavigationAccordionList = ({ contentArr }) => {
               </div>
             </details>
           </cagov-accordion> :
-          <a className={`sidenav ${setClass(item)}`} href={item.href}>{item.text}</a>
+          <a className={`sidenav ${setClass(item)}`} href={item.href} key={`nal-anchor${idx}`}>{item.text}</a>
       ))}
     </nav>
   )

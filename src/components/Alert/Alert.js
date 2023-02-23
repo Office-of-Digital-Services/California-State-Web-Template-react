@@ -1,27 +1,67 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Alert = ({ alertLevel, alertText, buttonHref = '', buttonText }) => {
-  return (
-    <div className={`alert alert-${alertLevel} alert-dismissible alert-banner`} role={'alert'}>
-      <div className={'container'}>
-        <button type={'button'} className={'close ms-lg-auto'} data-bs-dismiss={'alert'} aria-label={'Close'}>
-          <span className={'ca-gov-icon-close-mark'} aria-hidden={'true'}></span>
-        </button>
-        {alertLevel ?
-          <span className={'alert-level'}>
-            <span className={'ca-gov-icon-important'} aria-hidden={'true'}></span>
-            {alertLevel.toUpperCase()}
+import infoImage from './alert-info.svg';
+import dangerImage from './alert-warning-diamond.svg';
+import resolutionImage from './alert-success.svg';
+
+
+const Alert = ({ alertLevel, alertText, boldText, href = '', linkText }) => {
+  const setAlertLevel = (propAlertLevel) => {
+    switch (propAlertLevel) {
+      case 'info':
+        return infoImage;
+      case 'danger':
+        return dangerImage;
+      case 'resolution':
+        return resolutionImage
+      default:
+        return infoImage
+    }
+  }
+
+  const setContent = () => {
+    if (alertLevel !== 'warning') {
+      return (
+        <div className="alert alert-dismissible alert-banner" role="alert">
+          <div className="container">
+            <img src={setAlertLevel(alertLevel)} alt="alert info icon" />
+            <span className="alert-text">
+              <span className="text-bold">{boldText} </span>
+              {alertText}
+              <span className="ca-gov-icon-pipe" aria-hidden="true"></span>
+              <a href={href}>{linkText}</a>
+            </span>
+            <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
+          </div>
+        </div>
+      )
+    }
+
+    return (
+      <div className="alert alert-dismissible alert-banner" role="alert">
+        <div className="container">
+          <span className="alert-icon ca-gov-icon-warning-triangle text-warning" aria-hidden="true"></span>
+          <span className="alert-text">
+            <span className="text-bold">{boldText} </span>
+            {alertText}
+            <span className="ca-gov-icon-pipe" aria-hidden="true"></span>
+            <a href={href}>{linkText}</a>
           </span>
-          : null}
-        {alertText ?
-          <span className={'alert-text'}>{alertText}</span>
-          : null}
-        {buttonText ?
-          <a href={buttonHref} className={'btn btn-default btn-xs'}>{buttonText}</a>
-          : null}
+          <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
+
+  return setContent()
+}
+
+Alert.propTypes = {
+  alertLevel: PropTypes.string.isRequired,
+  alertText: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  linkText: PropTypes.string
 }
 
 export default Alert

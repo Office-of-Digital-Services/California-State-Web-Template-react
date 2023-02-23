@@ -81,31 +81,31 @@ function App() {
             <div>
               <Alert
                 alertLevel={'info'}
-                alertText={'We\'ve made some changes that might impact your experience.'}
-                buttonHref={'https://google.com'}
-                buttonText={'Learn more'}
+                alertText={'A new version of the State Web Template has launched.'}
+                boldText={'New!'}
+                href={'#'}
+                linkText={'Upgrade now'}
               />
               <Alert
                 alertLevel={'warning'}
-                alertText={'Your browser is outdated. Your experience may be degraded.'}
-                buttonHref={'https://google.com'}
-                buttonText={'More information'}
+                alertText={'Our website may be impacted during upgrade.'}
+                boldText={'Warning:'}
+                href={'#'}
+                linkText={'Learn more'}
               />
               <Alert
                 alertLevel={'danger'}
-                alertText={'Your browser is currently not supported.'}
-                buttonHref={'https://google.com'}
-                buttonText={'Learn more'}
+                alertText={'Our systems are currently down.'}
+                boldText={'Alert:'}
+                href={'#'}
+                linkText={'Learn more'}
               />
               <Alert
-                alertLevel={'success'}
-                alertText={'Well done! Your form has been submitted successfully.'}
-              />
-              <Alert
-                alertLevel={'severe'}
-                alertText={'Lots of RAIN!'}
-                buttonHref={'https://google.com'}
-                buttonText={'Go to Google'}
+                alertLevel={'resolution'}
+                alertText={'Our systems are back up again.'}
+                boldText={'Fixed.'}
+                href={'#'}
+                linkText={'Learn more'}
               />
             </div>
             <hr />
@@ -970,7 +970,7 @@ function App() {
                 }
               />
             </div>
-            <hr/>
+            <hr />
             <div>
               <h2 id={'get-started'}>CSS Shortcuts</h2>
               <h3>Gradient Backgrounds</h3>
