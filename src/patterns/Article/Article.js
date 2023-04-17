@@ -1,5 +1,6 @@
 import React from 'react';
-import SocialMediaIcons from '../../components/SocialMediaIcons/SocialMediaIcons'
+import PropTypes from 'prop-types';
+import SocialMediaIcons from '../../components/SocialMediaIcons/SocialMediaIcons';
 
 const Article = ({ articleContentArr, author, city, date, email, leadText, phone, socialMediaContentArr, title }) => {
   return (
@@ -41,6 +42,18 @@ const Article = ({ articleContentArr, author, city, date, email, leadText, phone
     </>
     //  End News Article
   )
+}
+
+Article.propTypes = {
+  articleContentArr: PropTypes.array,
+  author: PropTypes.string,
+  city: PropTypes.string,
+  date: PropTypes.string,
+  email: PropTypes.string,
+  leadText: PropTypes.string,
+  phone: PropTypes.string,
+  socialMediaContentArr: PropTypes.array,
+  title: PropTypes.string
 }
 
 export default Article
