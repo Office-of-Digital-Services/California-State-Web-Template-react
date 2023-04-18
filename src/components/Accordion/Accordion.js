@@ -22,9 +22,10 @@ import AccordionList from './AccordionList';
  *  }
  * />
  * 
- * @param {('basic'|'list')} [type='basic'] - Type of accordion to render. Available types are 'basic' and 'list'.
- * @param {string} summaryStr - Text displayed at accordion header
- * @param {string[]} contentArr - Text displayed when accordion is opened. Each array index will generate a new <p> tag with the array index as the content.
+ * @param {Object} params
+ * @param {string} [params.type='basic']
+ * @param {string} params.summaryStr
+ * @param {array} params.contentArr
  * @returns {React.ReactElement} Returns the Accordion component
  */
 
