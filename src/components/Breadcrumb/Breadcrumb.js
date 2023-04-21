@@ -43,7 +43,7 @@ const Breadcrumb = ({ breadcrumbArr, currentPage }) => {
 }
 
 Breadcrumb.propTypes = {
-  breadcrumbArr: PropTypes.arrayOf(PropTypes.string).isRequired, 
+  breadcrumbArr: PropTypes.arrayOf(PropTypes.string).isRequired,
   currentPage: PropTypes.string.isRequired
 }
 

@@ -5,6 +5,14 @@ import PropTypes from 'prop-types';
  * @summary Customizable button
  * @see https://github.com/Office-of-Digital-Services/California-State-Web-Template-react/wiki/Components#button
  * 
+ * @example
+ * <Button
+      buttonSize={'lg'}
+      buttonText={'Primary color'}
+      buttonType={'primary'}
+      disabled={true}
+      href={'#'}
+   />
  * 
  * @param {string} [href] - URL to navigate to on click.
  * @param {('xs'|'sm'|'default'|'lg')} [buttonSize='default'] - Set button size.
