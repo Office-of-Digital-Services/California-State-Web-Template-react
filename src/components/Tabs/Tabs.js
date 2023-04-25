@@ -19,8 +19,8 @@ import '../../js/cagov/tabs';
      }
    />
  * 
- * @param {array} headerArr - Each array index generates a Tab header containing the index value.
- * @param {array} sectionArr - An array of objects {string:headline, string:text}.
+ * @param {string[]} headerArr - Each array index generates a Tab header containing the index value.
+ * @param {object[]} sectionArr - An array of objects {string:headline, string:text}.
  * @param {string} sectionArr.headline - Sets Tab content headline.
  * @param {string} sectionArr.text = Sets Tab content body text.
  * 
