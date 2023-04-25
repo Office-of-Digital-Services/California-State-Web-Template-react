@@ -24,7 +24,7 @@ import PropTypes from 'prop-types';
  * @param {string} title - Executive title to display.
  * @param {string} type - Type of executive profile to display. Can be transparent, dark, or default if no type is given.
  * 
- * @returns 
+ * @returns {React.ReactElement} Returns the ExecutiveProfile component
  */
 
 const ExecutiveProfile = ({ agency, altText = 'Executive avatar', imageSrc, linkText, linkUrl, name, title, type = 'default' }) => {

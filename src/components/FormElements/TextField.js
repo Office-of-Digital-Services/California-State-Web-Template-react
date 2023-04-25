@@ -1,7 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TextField = ({ id, placeholder, labelText, isRequired }) => {
+/**
+ * @summary Text field with styling for forms.
+ * @see https://github.com/Office-of-Digital-Services/California-State-Web-Template-react/wiki/Components#text-field
+ * 
+ * @example
+ * <TextField 
+     id={'InputName'}
+     isRequired={false}
+     labelText={'Full Name'}
+     placeholder={'Name'}
+   />
+ * 
+ * @param {string} id - Sets id for Text Field.
+ * @param {boolean} [isRequired=false] - Sets required attribute for Text Field.
+ * @param {string} labelText - Sets display text for Text Field label.
+ * @param {string} placeholder - Sets placeholder text for Text Field.
+ * 
+ * @returns {React.ReactElement} returns TextField component.
+ */
+
+const TextField = ({ id, isRequired = false, labelText, placeholder }) => {
   return (
     <>
       <label className={'form-control-label'} htmlFor={id}>
