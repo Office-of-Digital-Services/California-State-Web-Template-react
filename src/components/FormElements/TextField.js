@@ -16,7 +16,7 @@ import PropTypes from 'prop-types';
  * @param {string} id - Sets id for Text Field.
  * @param {boolean} [isRequired=false] - Sets required attribute for Text Field.
  * @param {string} labelText - Sets display text for Text Field label.
- * @param {string} placeholder - Sets placeholder text for Text Field.
+ * @param {string} [placeholder] - Sets placeholder text for Text Field.
  * 
  * @returns {React.ReactElement} returns TextField component.
  */

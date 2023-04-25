@@ -1,7 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Modal = ({ headingText, bodyText }) => {
+/**
+ * @summary Generates modal with body and heading text
+ * @see https://github.com/Office-of-Digital-Services/California-State-Web-Template-react/wiki/Components#modal
+ * 
+ * @example
+ * <Modal 
+     bodyText={'This is the modal container\'s body'} 
+     headingText={'This is the modal container\'s heading'}
+   />
+ * 
+ * @param {string} bodyText - Sets the text to display in the Modal body.
+ * @param {string} headingText - Sets the text to display in the Modal heading.
+ * 
+ * @returns {React.ReactElement} returns Modal component.
+ */
+
+const Modal = ({ bodyText, headingText }) => {
   return (
     <div className='modal fade' id='modal' role='dialog' tabIndex='-1'>
       <div className='modal-dialog modal-lg'>
