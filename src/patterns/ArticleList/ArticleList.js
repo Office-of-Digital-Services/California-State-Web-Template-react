@@ -1,6 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * 
+ * @param {object[]} contentArr - An array of objects containing the article list content. Object shape: {string:date, string:leadText, string:type, string:url}
+ * @param {string} contentArr[].date - The date of the article to display. 
+ * @param {string} contentArr[].leadText - The date of the article to display. 
+ * @param {string} contentArr[].type - The date of the article to display. 
+ * @param {string} contentArr[].url - The date of the article to display. 
+ * 
+ * @returns {React.ReactElement} Returns the ArticleList component.
+ */
+
 const ArticleList = ({ contentArr }) => {
   return (
     <>
