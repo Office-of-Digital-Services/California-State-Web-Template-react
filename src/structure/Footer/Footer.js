@@ -9,7 +9,7 @@ const Footer = () => {
     if (!hasScript) {
 
       const script = document.createElement("script");
-      script.src = "https://california.azureedge.net/cdt/statetemplate/6.1.1/js/cagov.core.js";
+      script.src = "https://california.azureedge.net/cdt/statetemplate/6.1.2/js/cagov.core.js";
       script.async = true;
       script.id = "cdn-script";
 
