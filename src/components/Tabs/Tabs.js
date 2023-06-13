@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../../js/cagov/tabs';
 
 const Tabs = ({ headerArr, sectionArr }) => {
@@ -15,6 +16,11 @@ const Tabs = ({ headerArr, sectionArr }) => {
       ))}
     </div>
   )
+}
+
+Tabs.propTypes = {
+  headerArr: PropTypes.array.isRequired,
+  sectionArr: PropTypes.array.isRequired
 }
 
 export default Tabs

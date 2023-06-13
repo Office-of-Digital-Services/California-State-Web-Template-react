@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const DropdownMenu = ({ id, labelText, optionsArr }) => {
   return (
@@ -10,6 +11,12 @@ const DropdownMenu = ({ id, labelText, optionsArr }) => {
       </select>
     </>
   )
+}
+
+DropdownMenu.propTypes = {
+  id: PropTypes.string.isRequired,
+  labelText: PropTypes.string.isRequired,
+  optionsArr: PropTypes.array.isRequired
 }
 
 export default DropdownMenu

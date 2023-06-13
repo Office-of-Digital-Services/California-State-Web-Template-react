@@ -4,16 +4,46 @@ import SiteFooter from '../SiteFooter/SiteFooter';
 
 const Footer = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://california.azureedge.net/cdt/statetemplate/6.1.0/js/cagov.core.js";
-    script.async = true;
+    const hasScript = document.getElementById('cdn-script');
 
-    document.body.appendChild(script);
+    if (!hasScript) {
+
+      const script = document.createElement("script");
+      script.src = "https://california.azureedge.net/cdt/statetemplate/6.1.2/js/cagov.core.js";
+      script.async = true;
+      script.id = "cdn-script";
+
+      document.body.appendChild(script);
+    }
 
   }, []);
   return (
     <>
-      <SiteFooter />
+      <SiteFooter
+        contentArr={[
+          {
+            title: 'Column Title',
+            linkArr: [
+              { href: '#', title: 'Link title' },
+              { href: '#', title: 'Link title' },
+            ]
+          },
+          {
+            title: 'Column Title',
+            linkArr: [
+              { href: '#', title: 'Link title' },
+              { href: 'https://cdt.ca.gov/', title: 'External link title' },
+            ]
+          },
+          {
+            title: 'Column Title',
+            linkArr: [
+              { href: '#', title: 'Link title' },
+              { href: '#', title: 'Link title' }
+            ]
+          }
+        ]}
+      />
       <footer id="footer" className="global-footer">
         <button className="return-top"><span className="sr-only">Back to top</span></button>
         <div className="container">

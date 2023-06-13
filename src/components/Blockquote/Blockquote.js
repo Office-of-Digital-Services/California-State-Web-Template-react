@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Blockquote = ({ withGraphic = true, withPulledQuote = false, isProminent = false, quote, author, imageSrc, altText }) => {
 
@@ -37,6 +38,16 @@ const Blockquote = ({ withGraphic = true, withPulledQuote = false, isProminent =
     )
 
   return content;
+}
+
+Blockquote.propTypes = {
+  altText: PropTypes.string,
+  author: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string,
+  isProminent: PropTypes.bool,
+  quote: PropTypes.string.isRequired,
+  withGraphic: PropTypes.bool,
+  withPulledQuote: PropTypes.bool
 }
 
 export default Blockquote

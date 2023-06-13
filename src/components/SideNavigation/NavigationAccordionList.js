@@ -19,7 +19,7 @@ const NavigationAccordionList = ({ contentArr }) => {
       <div className="sr-only" id="components-list">Accordion side navigation</div>
       {contentArr.map((item, idx) => (
         item.secondLevelArr ?
-          <cagov-accordion className="sidenav" key={`nal-accordion${idx}`}>
+          <cagov-accordion className="sidenav">
             <details open={item.isOpen}>
               <summary className="active">{item.text}</summary>
               <div className="accordion-body">

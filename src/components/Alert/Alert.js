@@ -23,32 +23,32 @@ const Alert = ({ alertLevel, alertText, boldText, href = '', linkText }) => {
   const setContent = () => {
     if (alertLevel !== 'warning') {
       return (
-        <div className="alert alert-dismissible alert-banner" role="alert">
-          <div className="container">
+        <div class="alert alert-dismissible alert-banner" role="alert">
+          <div class="container">
             <img src={setAlertLevel(alertLevel)} alt="alert info icon" />
-            <span className="alert-text">
-              <span className="text-bold">{boldText} </span>
+            <span class="alert-text">
+              <span class="text-bold">{boldText} </span>
               {alertText}
-              <span className="ca-gov-icon-pipe" aria-hidden="true"></span>
+              <span class="ca-gov-icon-pipe" aria-hidden="true"></span>
               <a href={href}>{linkText}</a>
             </span>
-            <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
+            <button type="button" class="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
           </div>
         </div>
       )
     }
 
     return (
-      <div className="alert alert-dismissible alert-banner" role="alert">
-        <div className="container">
-          <span className="alert-icon ca-gov-icon-warning-triangle text-warning" aria-hidden="true"></span>
-          <span className="alert-text">
-            <span className="text-bold">{boldText} </span>
+      <div class="alert alert-dismissible alert-banner" role="alert">
+        <div class="container">
+          <span class="alert-icon ca-gov-icon-warning-triangle text-warning" aria-hidden="true"></span>
+          <span class="alert-text">
+            <span class="text-bold">{boldText} </span>
             {alertText}
-            <span className="ca-gov-icon-pipe" aria-hidden="true"></span>
+            <span class="ca-gov-icon-pipe" aria-hidden="true"></span>
             <a href={href}>{linkText}</a>
           </span>
-          <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
+          <button type="button" class="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
         </div>
       </div>
     )

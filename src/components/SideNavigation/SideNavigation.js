@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SingleLevelList from './SingleLevelList';
 import MultiLevelList from './MultiLevelList';
 import NavigationAccordionList from './NavigationAccordionList';
@@ -20,6 +21,11 @@ const SideNavigation = ({ type, contentArr }) => {
   }
 
   return content
+}
+
+SideNavigation.propTypes = {
+  contentArr: PropTypes.array.isRequired,
+  type: PropTypes.string
 }
 
 export default SideNavigation

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Logo from './template-logo.png';
 
 const SiteHeader = ({ stateText, departmentText }) => {
@@ -19,6 +20,11 @@ const SiteHeader = ({ stateText, departmentText }) => {
       </div>
     </div>
   )
+}
+
+SiteHeader.propTypes = {
+  departmentText: PropTypes.string.isRequired,
+  stateText: PropTypes.string.isRequired
 }
 
 export default SiteHeader

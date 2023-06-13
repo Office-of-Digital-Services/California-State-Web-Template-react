@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 
 const CardGrid = ({ contentArr }) => {
@@ -31,6 +32,10 @@ const CardGrid = ({ contentArr }) => {
       }
     </div >
   )
+}
+
+CardGrid.propTypes = {
+  contentArr: PropTypes.array.isRequired
 }
 
 export default CardGrid

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const TextArea = ({ id, subText, labelText, isRequired }) => {
   return (
@@ -17,6 +18,13 @@ const TextArea = ({ id, subText, labelText, isRequired }) => {
       }
     </>
   )
+}
+
+TextArea.propTypes = {
+  id: PropTypes.string.isRequired,
+  isRequired: PropTypes.bool,
+  labelText: PropTypes.string.isRequired,
+  subText: PropTypes.string
 }
 
 export default TextArea

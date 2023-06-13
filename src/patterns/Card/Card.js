@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Card = ({ icon, imageSrc, altText, titleText, bodyText, buttonText, buttonHref, type, author, agency, date }) => {
 
@@ -34,9 +35,12 @@ const Card = ({ icon, imageSrc, altText, titleText, bodyText, buttonText, button
     // {/* <!-- End Article --> */}
     :
     <div className={'card'}>
-      <img className={'card-img'} src={imageSrc} alt={altText} />
+      {imageSrc ?
+        <img className={'card-img'} src={imageSrc} alt={altText} /> :
+        null
+      }
       <div className={'card-body bg-gray-50 bg-gray-100-hover'}>
-        {icon ? <span className={icon} aria-hidden={'true'}></span> : null}
+        {icon ? <span className={`${icon} text-huge d-block text-center color-p2 color-p2-hover`} aria-hidden={'true'}></span> : null}
         <h3 className={'card-title'}>{titleText}</h3>
         <p className={'m-b-md'}>{bodyText}</p>
         {
@@ -48,6 +52,16 @@ const Card = ({ icon, imageSrc, altText, titleText, bodyText, buttonText, button
     </div>
 
   return content;
+}
+
+Card.propTypes = {
+  agency: PropTypes.string,
+  altText: PropTypes.string,
+  author: PropTypes.string,
+  bodyText: PropTypes.string.isRequired,
+  buttonHref: PropTypes.string,
+  buttonText: PropTypes.string,
+  titleText: PropTypes.string.isRequired
 }
 
 export default Card

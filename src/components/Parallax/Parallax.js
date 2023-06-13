@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Parallax = ({ contentObj }) => {
   const { imageSrc, heightInPx, headingText, bodyText, centerText, hasLightTextColor } = contentObj;
@@ -16,6 +17,10 @@ const Parallax = ({ contentObj }) => {
       </div>
     </div>
   )
+}
+
+Parallax.propTypes = {
+  contentObj: PropTypes.object.isRequired
 }
 
 export default Parallax

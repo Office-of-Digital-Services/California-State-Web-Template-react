@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Checkbox = ({ checkboxText, checkboxValue, id }) => {
   return (
@@ -9,6 +10,12 @@ const Checkbox = ({ checkboxText, checkboxValue, id }) => {
       </label>
     </div>
   )
+}
+
+Checkbox.propTypes = {
+  checkboxText: PropTypes.string.isRequired,
+  checkboxValue: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
 }
 
 export default Checkbox
