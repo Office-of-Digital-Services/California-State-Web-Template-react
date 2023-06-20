@@ -1,22 +1,25 @@
 import React, { useEffect } from 'react';
+
 import Logo from './Ca-Gov-Logo-Gold.svg';
 import SiteFooter from '../SiteFooter/SiteFooter';
 
 const Footer = () => {
-  useEffect(() => {
-    const hasScript = document.getElementById('cdn-script');
 
-    if (!hasScript) {
+  // useEffect(() => {
+  //   const hasScript = document.getElementById('cdn-script');
 
-      const script = document.createElement("script");
-      script.src = "https://california.azureedge.net/cdt/statetemplate/6.1.2/js/cagov.core.js";
-      script.async = true;
-      script.id = "cdn-script";
+  //   if (!hasScript) {
 
-      document.body.appendChild(script);
-    }
+  //     const script = document.createElement("script");
+  //     script.src = "https://california.azureedge.net/cdt/statetemplate/6.1.2/js/cagov.core.js";
+  //     script.async = true;
+  //     script.id = "cdn-script";
 
-  }, []);
+  //     document.body.appendChild(script);
+  //   }
+
+  // }, []);
+
   return (
     <>
       <SiteFooter
