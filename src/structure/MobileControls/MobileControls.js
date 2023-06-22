@@ -7,7 +7,7 @@ const MobileControls = () => {
         {/* <!-- Add more mobile controls here. These will be on the right side of the mobile page header section --> */}
       </span>
       <div className="mobile-control-group main-nav-icons">
-        <button id="nav-icon3" className="mobile-control toggle-menu" aria-expanded="false" aria-controls="navigation" data-bs-toggle="collapse" data-bs-target="#navigation">
+        <button id="nav-icon3" className="mobile-control toggle-menu" aria-expanded="false" aria-controls="navigation">
           <span></span>
           <span></span>
           <span></span>
