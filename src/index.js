@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "@cagovweb/state-template/dist/css/cagov.core.css";
+import "@cagovweb/state-template/dist/css/colortheme-oceanside.css";
+import "@cagovweb/state-template/dist/js/cagov.core.js";
 import './index.css';
 import App from './App';
 import Header from './structure/Header/Header';

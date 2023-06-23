@@ -6,10 +6,6 @@ import Banner from './patterns/Banner/Banner';
 import CardGrid from './patterns/CardGrid/CardGrid';
 import ProgressTracker from './patterns/ProgressTracker/ProgressTracker';
 
-import "@cagovweb/state-template/dist/css/cagov.core.css";
-import "@cagovweb/state-template/dist/css/colortheme-oceanside.css";
-import "@cagovweb/state-template/dist/js/cagov.core.js";
-
 function App() {
 
   return (
