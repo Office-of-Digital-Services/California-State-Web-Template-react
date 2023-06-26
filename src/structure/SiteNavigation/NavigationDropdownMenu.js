@@ -29,7 +29,7 @@ const NavigationDropdownMenu = ({ contentArr }) => {
               <>
                 <div className={'has-sub-btn'}>
                   {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-                  <a onClick={handleToggle} id={`navheader_tab${idx}`} className={'first-level-btn nav-header has-sub'} aria-expanded={false} aria-controls={`navheader_panel${idx}`} data-nav-id={''}>
+                  <a onClick={handleToggle} style={{ cursor: 'pointer' }} id={`navheader_tab${idx}`} className={'first-level-btn nav-header has-sub'} aria-expanded={false} aria-controls={`navheader_panel${idx}`} data-nav-id={''}>
                     {item.navHeader}
                   </a>
                 </div>
