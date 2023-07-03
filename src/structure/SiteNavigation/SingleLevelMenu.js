@@ -6,7 +6,7 @@ const SingleLevelMenu = ({ contentArr }) => {
       <ul id="nav_list" className="top-level-nav">
         {contentArr.map((item, idx) => (
           <li className="nav-item" key={`slm-list-item${idx}`}>
-            <a href={item.href} className="first-level-link">{item.text}</a>
+            <a href={item.href} className="first-level-link">{item.navHeader}</a>
           </li>
         ))}
       </ul>
