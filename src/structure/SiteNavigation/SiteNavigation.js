@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Megamenu from './Megamenu';
 import NavigationDropdownMenu from './NavigationDropdownMenu';
 import SingleLevelMenu from './SingleLevelMenu';
+import IconMenu from './IconMenu';
 
 const SiteNavigation = ({ type, contentArr }) => {
 
@@ -14,6 +15,8 @@ const SiteNavigation = ({ type, contentArr }) => {
         return <NavigationDropdownMenu contentArr={contentArr} />
       case 'single':
         return <SingleLevelMenu contentArr={contentArr} />
+      case 'icon':
+        return <IconMenu contentArr={contentArr} />
       default:
         return;
     }

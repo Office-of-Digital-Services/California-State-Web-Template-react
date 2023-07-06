@@ -1,24 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import Logo from './Ca-Gov-Logo-Gold.svg';
 import SiteFooter from '../SiteFooter/SiteFooter';
 
 const Footer = () => {
-
-  // useEffect(() => {
-  //   const hasScript = document.getElementById('cdn-script');
-
-  //   if (!hasScript) {
-
-  //     const script = document.createElement("script");
-  //     script.src = "https://california.azureedge.net/cdt/statetemplate/6.1.2/js/cagov.core.js";
-  //     script.async = true;
-  //     script.id = "cdn-script";
-
-  //     document.body.appendChild(script);
-  //   }
-
-  // }, []);
 
   return (
     <>
@@ -47,37 +31,55 @@ const Footer = () => {
           }
         ]}
       />
+      {/* <!-- Global Footer --> */}
       <footer id="footer" className="global-footer">
-        <button className="return-top"><span className="sr-only">Back to top</span></button>
         <div className="container">
           <div className="d-flex">
-            <a href="https://ca.gov" className="cagov-logo" target="_blank" rel='noreferrer'>
-              <img src={Logo} alt="CA.gov logo" />
+            <a href="https://ca.gov" className="cagov-logo">
+              <span className="sr-only">CA.gov</span>
+              <span className="ca-gov-logo-svg"></span>
             </a>
-
             <ul className="footer-links">
-              <li><a href="/conditions-of-use.html">Conditions of use</a></li>
-              <li><a href="/privacy-policy.html">Privacy policy</a></li>
-              <li><a href="/images/WebAccessibilityCert-beta.template.webstandards.ca.gov.pdf" aria-label="Accessibility Certification">Accessibility</a></li>
-              <li><a href="/sitemap.html">Sitemap</a></li>
-              <li><a href="/about.html">About</a></li>
+              <li>
+                <a href="/conditions-of-use.html">Conditions of use</a>
+              </li>
+              <li>
+                <a href="/privacy-policy.html">Privacy policy</a>
+              </li>
+              <li>
+                <a href="/website-acessibility-certification.html">
+                  Website accessibility certification
+                </a>
+              </li>
+              <li>
+                <a href="/sitemap.html">Sitemap</a>
+              </li>
             </ul>
-
             <ul className="socialsharer-container">
-              <li><a href="https://github.com/Office-of-Digital-Innovation/California-State-Web-Template"><span className="ca-gov-icon-github" aria-hidden="true"></span><span className="sr-only">GitHub</span></a></li>
+              <li>
+                <a href="https://github.com/Office-of-Digital-Innovation/California-State-Web-Template">
+                  <span className="ca-gov-icon-github" aria-hidden="true"></span>
+                  <span className="sr-only">GitHub</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-
+        {/* Copyright Statement  */}
         <div className="copyright">
           <div className="container text-right">
             Copyright ©
             <span id="thisyear">
-              {new Date().getFullYear()}</span> State of California
+              {new Date().getFullYear()}
+            </span>
+            {' '}State of California
           </div>
         </div>
+        <button className="return-top">
+          <span className="sr-only">Back to top</span>
+        </button>
       </footer>
-
+      {/* <!-- Extra Decorative Content --> */}
       <div className="decoration-last">&nbsp;</div>
     </>
   )

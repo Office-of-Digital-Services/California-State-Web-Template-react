@@ -12,11 +12,11 @@ const ExecutiveProfile = ({ agency, altText = 'Executive avatar', imageSrc, link
     };
   }
   return (
-    <figure class={`executive-profile ${setClass()}`}>
+    <figure className={`executive-profile ${setClass()}`}>
       <img src={imageSrc} alt={altText} />
-      <div class="executive-profile-body">
+      <div className="executive-profile-body">
         <p>{title}</p>
-        <h3 class="executive-name">{name}</h3>
+        <h3 className="executive-name">{name}</h3>
         <p>{agency}</p>
         <p><a href={linkUrl} aria-label="Link to Official's Website">{linkText}</a></p>
       </div>

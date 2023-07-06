@@ -7,13 +7,13 @@ const ArticleList = ({ contentArr }) => {
       {contentArr.map((item, idx) => (
         <>
           <h2>{item.listDate}</h2>
-          <hr class="m-y-md" />
+          <hr className="m-y-md" />
 
           {item.articles.map((articleItem, articleIdx) => (
             <>
-              <h3 class="lead font-weight-700"><a href={articleItem.url} aria-disabled="true">{articleItem.leadText}</a></h3>
+              <h3 className="lead font-weight-700"><a href={articleItem.url} aria-disabled="true">{articleItem.leadText}</a></h3>
               <p>{`${articleItem.date} | ${articleItem.type}`}</p>
-              <hr class="m-y-md" />
+              <hr className="m-y-md" />
             </>
           ))}
         </>
