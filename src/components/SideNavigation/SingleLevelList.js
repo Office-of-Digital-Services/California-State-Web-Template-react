@@ -15,7 +15,7 @@ const SingleLevelList = ({ contentArr }) => {
   }
 
   return (
-    <nav aria-label={'list navigation'}>
+    <nav aria-label={'list navigation'} className={'side-navigation'}>
       <ul className="list-navigation">
         {contentArr.map((item, idx) => (
           <li key={`sn-list-item${idx}`}>

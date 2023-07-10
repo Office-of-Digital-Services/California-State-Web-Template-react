@@ -6,6 +6,7 @@ const TextField = ({ id, placeholder, labelText, isRequired }) => {
     <>
       <label className={'form-control-label'} htmlFor={id}>
         {isRequired ? <span className={'required-label'}>*</span> : null}
+        {isRequired ? <span className="sr-only">Required field:</span> : null}
         {labelText}
       </label>
       <input type={'text'} className={'form-control'} id={id} placeholder={placeholder} />

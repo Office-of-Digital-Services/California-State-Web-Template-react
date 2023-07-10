@@ -6,6 +6,7 @@ const TextArea = ({ id, subText, labelText, isRequired }) => {
     <>
       <label className={'form-control-label'} htmlFor={id}>
         {isRequired ? <span className={'required-label'}>*</span> : null}
+        {isRequired ? <span className="sr-only">Required field:</span> : null}
         {labelText}
       </label>
       <textarea id={id} className={'form-control'} rows={'5'} cols={'80'}></textarea>

@@ -7,7 +7,7 @@ const Accordion = ({ type, summaryStr, contentArr }) => (type === 'list' ? <Acco
 
 Accordion.propTypes = {
   type: PropTypes.string,
-  summaryStr: PropTypes.string.isRequired,
+  summaryStr: PropTypes.string,
   contentArr: PropTypes.array.isRequired
 }
 

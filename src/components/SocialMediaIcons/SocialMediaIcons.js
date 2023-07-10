@@ -30,7 +30,7 @@ const SocialMediaIcons = ({ contentArr }) => {
 
   return (
     <div className='socialsharer-container'>
-      {contentArr.map((item, idx) => <a key={`smi-a-item${idx}`} className={setClassName(item.type)} title={`${capitalizeFirstLetter(item.type)} Link`} href={item.href}><span className='external-link-icon' aria-hidden='true'></span></a>)}
+      {contentArr.map((item, idx) => <a key={`smi-a-item${idx}`} className={setClassName(item.type)} title={`${capitalizeFirstLetter(item.type)} Link`} href={item.href}><span className={'sr-only'}>{`Link to ${item.type}`}</span></a>)}
     </div>
   )
 }

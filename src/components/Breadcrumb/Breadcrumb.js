@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const Breadcrumb = ({ breadcrumbArr, currentPage }) => {
   return (
-    <nav aria-label={'You are here'}>
-      <ol className={'breadcrumb'}>
+    <nav aria-label={'Breadcrumb'} className={'breadcrumbs'}>
+      <ol>
         {breadcrumbArr.map((item, idx) => {
           return (
             <li key={`bc-list-item${idx}`}>
