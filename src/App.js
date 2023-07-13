@@ -19,21 +19,25 @@ function App() {
             imageSrc={bannerImage}
             titleText={'Hello world!'}
           />
+
           <div style={{ background: '#cccccc' }}>
             <div className={'container p-t-lg'}>
               <CardGrid
                 contentArr={[
                   {
+                    type: 'icon',
                     bodyText: 'Body goes here',
                     icon: 'ca-gov-icon-code',
                     titleText: 'Title Goes Here'
                   },
                   {
+                    type: 'icon',
                     bodyText: 'Body goes here',
                     icon: 'ca-gov-icon-accessibility',
                     titleText: 'Title Goes Here'
                   },
                   {
+                    type: 'icon',
                     bodyText: 'Body goes here',
                     icon: 'ca-gov-icon-capitol',
                     titleText: 'Title Goes Here'
