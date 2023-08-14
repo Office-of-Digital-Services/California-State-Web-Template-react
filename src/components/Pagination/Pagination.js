@@ -1,4 +1,20 @@
 import React, { useEffect } from "react";
+import PropTypes from 'prop-types';
+
+/**
+ * @summary Pagination via custom Web Component.
+ * 
+ * @example
+ * <Pagination
+ *   currentPage={'4'}
+ *   totalPages={'10'}
+ * />
+ * 
+ * @param {string} currentPage - Sets value for current page.
+ * @param {string} totalPages - Sets value for total pages. 
+ *  
+ * @returns {React.ReactElement} returns Pagination component.
+ */
 
 function Pagination({ currentPage = '1', totalPages }) {
   useEffect(() => {
@@ -16,6 +32,11 @@ function Pagination({ currentPage = '1', totalPages }) {
       data-total-pages={totalPages}
     ></cagov-pagination>
   );
+}
+
+Pagination.propTypes = {
+  currentPage: PropTypes.string.isRequired,
+  totalPages: PropTypes.string.isRequired
 }
 
 export default Pagination;
