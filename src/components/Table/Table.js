@@ -1,7 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Table = ({ type, headerArr, rowArr }) => {
+/**
+ * @summary Generates a variety of table styles using arrays of content.
+ * @see https://github.com/Office-of-Digital-Services/California-State-Web-Template-react/wiki/Components#table
+ * 
+ * @example
+ * <Table
+     type={'shaded'}
+     headerArr={['#', 'First Name', 'Last Name', 'Username']}
+     rowArr={
+       [
+         ['1', 'Mark', 'Otto', '@mdo'],
+         ['2', 'Jacob', 'Thornton', '@jthornton'],
+         ['3', 'Larry', 'the Bird', '@twitter']
+       ]
+     }
+   />
+ * 
+ * @param {array} headerArr - Each array index generates a table header containing the index value.
+ * @param {array} rowArr - A nested array where each index contains an array with each row's data.
+ * @param {string} [type='default'] - Sets class for Table. Can be 'default', 'shaded', or 'zebra'. 
+ *  
+ * @returns {React.ReactElement} Returns the Table component.
+ */
+
+const Table = ({ headerArr, rowArr, type }) => {
 
   const setTableType = (_type) => {
     switch (_type) {

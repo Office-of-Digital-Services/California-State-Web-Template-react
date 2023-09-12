@@ -1,57 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DefaultCard from './DefaultCard';
+import IconCard from './IconCard';
+import ImageCard from './ImageCard';
+
+/**
+ * @summary Generate Icon, Image, or Default Card
+ * @see https://github.com/Office-of-Digital-Services/California-State-Web-Template-react/wiki/Patterns#card
+ * 
+ * @example
+ * <Card
+     titleText={'Give your card a short title'}
+     bodyText={'Card body text'}
+     imageSrc={'./path/to.image.jpg'}
+     altText={'Card size'}
+     buttonHref={'https://www.google.com'}
+     buttonText={'Go to Google'}
+   />
+ * 
+ * @param {string} altText - Sets alt text for image.
+ * @param {string} bodyText - Sets body text.
+ * @param {string} button - Sets button text.
+ * @param {string} buttonHref - Sets destination URL.
+ * @param {string} icon - Sets icon to be used.
+ * @param {string} imageSrc - Sets URI for image source.
+ * @param {string} titleText - Sets title text.
+ * @param {string} type - Sets the type of Card to generate.
+ * @param {string} author - Sets author for News Card.
+ * @param {string} agency - Sets agency for News Card.
+ * @param {string} date - Sets date for News Card.
+ * 
+ * @returns {React.ReactElement} Returns the Card component.
+ */
 
 const Card = ({ icon, imageSrc, altText, titleText, bodyText, buttonText, buttonHref, type, author, agency, date }) => {
-
-  const content = type === 'news' ?
-    // {/* <!-- Article --> */}
-    <article className="bg-gray-50-hover p-b-md brd-solid-1 brd-gray-light pos-rel">
-      <figure className="pos-rel m-b-0">
-        <img className="img-fluid w-100" src={imageSrc} alt={altText} />
-        <figcaption className="pos-abs top-sm p-l-0 rounded-3">
-          <span className="btn btn-sm btn-standout rounded-0" href="#">{date}</span>
-        </figcaption>
-      </figure>
-
-      <div className="p-a">
-        <ul className="list-inline small m-y-0">
-          <li className="list-inline-item">
-            <span className="color-gray">By:</span>
-            <span className="color-gray-dark color-primary-hover" href="#">{author}</span>
-          </li>
-          <li className="list-inline-item">
-            <span className="color-gray">In:</span>
-            <span className="color-gray-dark color-primary-hover" href="#">{agency}</span>
-          </li>
-        </ul>
-
-        <h3 className="h4 m-t-0 m-b-sm">
-          <a className="u-link-v5 color-gray-dark color-primary-hover link-before no-underline" href={buttonHref}>{titleText}</a>
-        </h3>
-
-        <p>{bodyText}</p>
-      </div>
-    </article>
-    // {/* <!-- End Article --> */}
-    :
-    <div className={'card'}>
-      {imageSrc ?
-        <img className={'card-img'} src={imageSrc} alt={altText} /> :
-        null
-      }
-      <div className={'card-body bg-gray-50 bg-gray-100-hover'}>
-        {icon ? <span className={`${icon} text-huge d-block text-center color-p2 color-p2-hover`} aria-hidden={'true'}></span> : null}
-        <h3 className={'card-title'}>{titleText}</h3>
-        <p className={'m-b-md'}>{bodyText}</p>
-        {
-          buttonText ?
-            <a className='btn btn-primary p-x-md' href={buttonHref}>{buttonText}<span className='sr-only'>with link related to card title</span></a> :
-            null
-        }
-      </div>
-    </div>
-
-  return content;
+  switch (type) {
+    case 'icon':
+      return <IconCard bodyText={bodyText} buttonHref={buttonHref} icon={icon} titleText={titleText} />
+    case 'image':
+      return <ImageCard altText={altText} bodyText={bodyText} buttonHref={buttonHref} imageSrc={imageSrc} titleText={titleText} />
+    default:
+      return <DefaultCard bodyText={bodyText} buttonHref={buttonHref} buttonText={buttonText} icon={icon} titleText={titleText} />
+  }
 }
 
 Card.propTypes = {
@@ -61,7 +51,11 @@ Card.propTypes = {
   bodyText: PropTypes.string.isRequired,
   buttonHref: PropTypes.string,
   buttonText: PropTypes.string,
-  titleText: PropTypes.string.isRequired
+  date: PropTypes.string,
+  icon: PropTypes.string,
+  imageSrc: PropTypes.string,
+  titleText: PropTypes.string.isRequired,
+  type: PropTypes.string,
 }
 
 export default Card

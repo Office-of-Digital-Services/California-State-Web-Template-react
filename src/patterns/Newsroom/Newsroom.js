@@ -1,6 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * @summary Generates a Newsroom landing page
+ * @see https://template.webstandards.ca.gov/patterns/newsroom.html 
+ * 
+ * @param {Object[]} cardArr
+ * @param {Object[]} featuredArr 
+ * @param {Object[]} latestArr
+ * 
+ * @param {string} body - cardArr[].body - Sets body text for card.
+ * @param {string} title - cardArr[].title - Sets title text for card.
+ * @param {string} url - cardArr[].url - Sets destination URL for card.
+ * 
+ * @param {string} altText - featuredArr[].altText - Sets alt text for featured image.
+ * @param {string} imageSrc - featuredArr[].imageSrc - Sets URI for featured image.
+ * @param {string} url - featuredArr[].url - Sets destination URL.
+ * @param {string} headline - featuredArr[].headline - Sets headline text.
+ * @param {string} date - featuredArr[].date - Sets date text.
+ * @param {string} type - featuredArr[].type - Sets type text.
+ * 
+ * @param {string} url - latestArr[].url - Sets destination URL.
+ * @param {string} headline - latestArr[].headline - Sets headline text.
+ * @param {string} date - latestArr[].date - Sets date text.
+ * @param {string} type - latestArr[].type - Sets type text. 
+ * 
+ * @returns {React.ReactElement} Returns the Newsroom pattern.
+ */
+
 const Newsroom = ({ featuredArr, cardArr, latestArr }) => {
   return (
     <>

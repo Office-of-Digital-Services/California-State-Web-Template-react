@@ -10,7 +10,7 @@ const FeatureBanner = ({ titleText, bodyText, buttonHref, buttonText, imageSrc }
           <a href={buttonHref} className="btn btn-primary m-y-md">{buttonText}<span className="sr-only">(feature)</span></a>
         </div>
         <div className="col-lg-8 col-md-6 p-0 text-right order-1 order-md-2 d-flex justify-content-center">
-          <a href="#" className="feature-img" style={{ background: `url(${imageSrc})` }} aria-label="Feature card example image">
+          <a href={buttonHref} className="feature-img" style={{ background: `url(${imageSrc})` }} aria-label="Feature card example image">
           </a>
         </div>
       </div>

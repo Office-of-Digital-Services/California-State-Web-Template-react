@@ -1,7 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const GradientBackgrounds = ({ type }) => {
+/**
+ * @summary Generate gradient from preset classes
+ * 
+ * @example
+ * <GradientBackgrounds type={'primary'} />
+ * 
+ * @param {string} [type='default'] - Sets the type of gradient background. Can be 
+ * 'primary-gradient',
+ * 'highlight-gradient',
+ * 'standout-gradient',
+ * 'secondary-gradient',
+ * 'primary-standout-gradient',
+ * 'primary-highlight-gradient',
+ * 'primary-secondary-gradient',
+ * 'standout-highlight-gradient'
+ * 'danger-warning-gradient',
+ * 'info-success-gradient',
+ * 'grey-radialgradient',
+ * 'greylight-radialgradient',
+ * 'primary-radialgradient',
+ * 'highlight-radialgradient',
+ * 'standout-radialgradient',
+ * 'secondary-radialgradient',
+ * 'secondarylight-radialgradient',
+ * 'primary-gradient'.
+ * 
+ * @returns {React.ReactElement} Returns the GradientBackgrounds component.
+ */
+
+const GradientBackgrounds = ({ type = 'default' }) => {
   const setType = (t) => {
     switch (t) {
       case 'primary':
