@@ -1,5 +1,15 @@
 import React from 'react'
 
+/**
+ * @summary This search bar appears on the right side of the header. This is the default search bar in the template.
+ * @see https://template.webstandards.ca.gov/structure/search.html#Active-search
+ * 
+ * @example
+ * <ActiveSearch />
+ * 
+ * @returns {React.ReactElement} Returns the ActiveSearch structure element
+ */
+
 const ActiveSearch = () => (
   <div className="container">
     <form id="Search" className="pos-rel" action="/serp.html">

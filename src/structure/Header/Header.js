@@ -4,6 +4,16 @@ import MobileControls from '../MobileControls/MobileControls';
 import ActiveSearch from '../Search/ActiveSearch';
 import SiteNavigation from '../SiteNavigation/SiteNavigation';
 
+/**
+ * @summary The Header component contains static and dynamic Structure elements. The SiteHeader and SiteNavigation can be customized by passing in props.
+ * @see https://github.com/Office-of-Digital-Services/California-State-Web-Template-react/wiki/Structure#header
+ * 
+ * @example
+ * <Header />
+ * 
+ * @returns {React.ReactElement} Returns the Header structure element.
+ */
+
 const Header = () => (
   <header role={'banner'} id={'header'} className={'global-header fixed'}>
     <div id="skip-to-content">

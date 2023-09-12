@@ -24,7 +24,7 @@ import FullSpanBanner from './FullSpanBanner';
  * @param {string} [type='default'] - Sets the type of Banner to generate. Can be 'fullspan' or 'feature'.
  * 
  *  
- * @returns 
+ * @returns {React.ReactElement} Returns the Banner component.
  */
 
 const Banner = ({ bodyText, buttonHref, buttonText, imageSrc, titleText, type = 'fullspan' }) => {

@@ -1,5 +1,15 @@
 import React from 'react'
 
+/**
+ * @summary This search bar is hidden (inactive) and becomes active when people select the search menu icon. This search is used on mobile and for sites that use icon menu (which includes the search icon).
+ * @see https://template.webstandards.ca.gov/structure/search.html#Inactive-search
+ * 
+ * @example
+ * <InactiveSearch />
+ * 
+ * @returns {React.ReactElement} Returns the InactiveSearch structure element.
+ */
+
 const InactiveSearch = () => (
   <div className="container">
     <form id="Search" className="pos-rel" action="/serp.html">

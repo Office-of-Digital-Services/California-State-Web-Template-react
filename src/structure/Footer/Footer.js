@@ -2,6 +2,16 @@ import React from 'react';
 
 import SiteFooter from '../SiteFooter/SiteFooter';
 
+/**
+ * @summary The Footer is a static component containing links that are universal to California state agencies. It contains the configurable SiteFooter element.
+ * @see https://github.com/Office-of-Digital-Services/California-State-Web-Template-react/wiki/Structure#footer
+ * 
+ * @example
+ * <Footer />
+ * 
+ * @returns {React.ReactElement} Returns the Footer structure element.
+ */
+
 const Footer = () => {
 
   return (
