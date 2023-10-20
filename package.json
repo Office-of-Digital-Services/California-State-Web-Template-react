@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://Office-of-Digital-Services.github.io/California-State-Web-Template-react",
   "dependencies": {
-    "@cagovweb/state-template": "^1.1.0-beta.5",
+    "@cagovweb/state-template": "^6.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
