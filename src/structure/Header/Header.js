@@ -30,7 +30,7 @@ const Header = () => (
               </a>
             </div>
             <p className="official-tag">
-              <span className="desktop-only">Official website of the</span>
+              <span className="desktop-only">Official website of the </span>
               State of California
             </p>
           </div>
