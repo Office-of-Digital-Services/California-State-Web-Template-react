@@ -19,7 +19,6 @@ function App() {
             imageSrc={bannerImage}
             titleText={'Hello world!'}
           />
-
           <div style={{ background: '#cccccc' }}>
             <div className={'container p-t-lg'}>
               <CardGrid
