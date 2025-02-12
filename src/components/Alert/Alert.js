@@ -42,56 +42,45 @@ const Alert = ({ alertLevel, alertText, boldText, href = '', linkText }) => {
       return (
         <div className="alert alert-dismissible alert-banner" role="alert">
           <div className="container">
-            <div className="alert alert-dismissible alert-banner" role="alert">
-              <div className="container">
-                <img src={setAlertLevel(alertLevel)} alt="alert info icon" />
-                <span className="alert-text">
-                  <span className="text-bold">{boldText} </span>
-                  <span className="alert-text">
-                    <span className="text-bold">{boldText} </span>
-                    {alertText}
-                    <span className="ca-gov-icon-pipe" aria-hidden="true"></span>
-                    <span className="ca-gov-icon-pipe" aria-hidden="true"></span>
-                    <a href={href}>{linkText}</a>
-                  </span>
-                  <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
-              </div>
-            </div>
-            )
+            <img src={setAlertLevel(alertLevel)} alt="alert info icon" />
+            <span className="alert-text">
+              <span className="text-bold">{boldText} </span>
+              {alertText}
+              <span className="ca-gov-icon-pipe" aria-hidden="true" />
+              <a href={href}>{linkText}</a>
+            </span>
+            <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true" /></button>
+          </div>
+        </div>
+      )
     }
 
-            return (
-            <div className="alert alert-dismissible alert-banner" role="alert">
-              <div className="container">
-                <span className="alert-icon ca-gov-icon-warning-triangle text-warning" aria-hidden="true"></span>
-                <span className="alert-text">
-                  <span className="text-bold">{boldText} </span>
-                  <div className="alert alert-dismissible alert-banner" role="alert">
-                    <div className="container">
-                      <span className="alert-icon ca-gov-icon-warning-triangle text-warning" aria-hidden="true"></span>
-                      <span className="alert-text">
-                        <span className="text-bold">{boldText} </span>
-                        {alertText}
-                        <span className="ca-gov-icon-pipe" aria-hidden="true"></span>
-                        <span className="ca-gov-icon-pipe" aria-hidden="true"></span>
-                        <a href={href}>{linkText}</a>
-                      </span>
-                      <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
-                      <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true"></span></button>
-                    </div>
-                  </div>
-                  )
+    return (
+      <div className="alert alert-dismissible alert-banner" role="alert">
+        <div className="container">
+          <span className="alert-icon ca-gov-icon-warning-triangle text-warning" aria-hidden="true" />
+          <span className="alert-text">
+            <span className="text-bold">{boldText}</span>
+            {alertText}
+            <span className="ca-gov-icon-pipe" aria-hidden="true" />
+            <a href={href}>{linkText}</a>
+          </span>
+          <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true" /></button>
+          <button type="button" className="close ms-lg-auto" data-bs-dismiss="alert" aria-label="Close"><span className="ca-gov-icon-close-mark" aria-hidden="true" /></button>
+        </div>
+      </div>
+    )
   }
 
-                  return setContent()
+  return setContent()
 }
 
-                  Alert.propTypes = {
-                    alertLevel: PropTypes.string.isRequired,
-                  alertText: PropTypes.string.isRequired,
-                  boldText: PropTypes.string,
-                  href: PropTypes.string,
-                  linkText: PropTypes.string
+Alert.propTypes = {
+  alertLevel: PropTypes.string.isRequired,
+  alertText: PropTypes.string.isRequired,
+  boldText: PropTypes.string,
+  href: PropTypes.string,
+  linkText: PropTypes.string
 }
 
-                  export default Alert
+export default Alert

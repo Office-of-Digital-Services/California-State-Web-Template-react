@@ -23,7 +23,7 @@ import PropTypes from 'prop-types';
  * @returns {React.ReactElement} Returns the Button component
  */
 
-const Button = ({ href, buttonSize = 'default', buttonType = 'default', buttonText, disabled = false }) => {
+const Button = ({ href, buttonSize = '', buttonType = 'default', buttonText, disabled = false }) => {
   return (
     <>
       {
