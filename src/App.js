@@ -1,5 +1,9 @@
 // Sample images
 import testAvatar from './components/Blockquote/blockquote-with-image.jpg';
+import primaryParallax from './components/Parallax/background-primary.jpg';
+import lightParallax from './components/Parallax/bg-open-data.jpg';
+import sunsetParallax from './components/Parallax/main-banner4.jpg';
+
 
 // Components
 import Accordion from './components/Accordion/Accordion';
@@ -8,6 +12,24 @@ import Blockquote from './components/Blockquote/Blockquote';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CountdownTimer from './components/CountdownTimer/CountdownTimer';
+import TextField from './components/FormElements/TextField';
+import TextArea from './components/FormElements/TextArea';
+import Checkbox from './components/FormElements/Checkbox';
+import RadioButton from './components/FormElements/RadioButton';
+import DropdownMenu from './components/FormElements/DropdownMenu';
+import FileInput from './components/FormElements/FileInput';
+import HorizontalSeparator from './components/HorizontalSeparator/HorizontalSeparator';
+import Lists from './components/Lists/Lists';
+import Modal from './components/Modal/Modal';
+import NumberCounter from './components/NumberCounter/NumberCounter';
+import Parallax from './components/Parallax/Parallax';
+import ProgressBar from './components/ProgressBar/ProgressBar';
+import SingleLevelList from './components/SideNavigation/SingleLevelList';
+import MultiLevelList from './components/SideNavigation/MultiLevelList';
+import NavigationAccordionList from './components/SideNavigation/NavigationAccordionList';
+import SocialMediaIcons from './components/SocialMediaIcons/SocialMediaIcons';
+import Table from './components/Table/Table';
+import Tabs from './components/Tabs/Tabs';
 
 function App() {
 
@@ -224,10 +246,291 @@ function App() {
               />
             </div>
             <hr />
-          </div>
+            <h2>Form Elements</h2>
+            <div>
+              <form action="">
+                <TextField
+                  id={'InputName'}
+                  isRequired={false}
+                  labelText={'Full Name'}
+                  placeholder={'Name'}
+                />
+                <TextArea
+                  id={'exampleInputComment'}
+                  isRequired={true}
+                  labelText={'Your message'}
+                  subText={'Use this space for error messages or instructional text'}
+                />
+                <div class="form-check m-b">
+                  <Checkbox
+                    id={'exampleCheckbox1'}
+                    checkboxText={'Option 1'}
+                    checkboxValue={'1'}
+                  />
+                </div>
+                <div class="form-check m-b">
+                  <Checkbox
+                    id={'exampleCheckbox2'}
+                    checkboxText={'Option 2'}
+                    checkboxValue={'2'}
+                  />
+                </div>
+                <div class="form-check m-b">
+                  <Checkbox
+                    id={'exampleCheckbox3'}
+                    checkboxText={'Option 3'}
+                    checkboxValue={'3'}
+                  />
+                </div>
+                <div class="form-check m-b">
+                  <RadioButton
+                    id={'exampleRadio1'}
+                    radioName={'test_group'}
+                    radioText={'Option 1'}
+                    radioValue={'1'}
+                  />
+                </div>
+                <div class="form-check m-b">
+                  <RadioButton
+                    id={'exampleRadio2'}
+                    radioName={'test_group'}
+                    radioText={'Option 2'}
+                    radioValue={'2'}
+                  />
+                </div>
+                <div class="form-check m-b">
+                  <RadioButton
+                    id={'exampleRadio3'}
+                    radioName={'test_group'}
+                    radioText={'Option 3'}
+                    radioValue={'3'}
+                  />
+                </div>
+                <DropdownMenu
+                  id={'test_dropdown'}
+                  labelText={'Custom select'}
+                  optionsArr={[{ text: 'Option 1', value: '1' }, { text: 'Option 2', value: '2' }, { text: 'Option 3', value: '3' }]}
+                />
+                <FileInput
+                  id={'test_file_input'}
+                  labelText={'Upload your file'}
+                  feedbackText={'Feedback text.'}
+                />
+              </form>
+            </div>
+            <h2>Horizontal Separator</h2>
+            <div>
+              <p>Default</p>
+              <HorizontalSeparator />
+              <p>Dotted</p>
+              <HorizontalSeparator isDotted={true} />
+            </div>
+            <h2>Lists</h2>
+            <div>
+              <Lists
+                itemsArr={['List step 1 of your process.', 'Continue your list of unrelated items', 'Continue your list of unrelated items']}
+              />
+            </div>
+            <div>
+              <Lists
+                itemsArr={['List step 1 of your process.', 'List the second step of your process.', 'List the third step of your process.']}
+                type={'ordered'}
+              />
+            </div>
+            <hr />
+            <div>
+              <h2>Modal</h2>
+              <button type="button" className="btn btn-default btn-lg m-t-lg" data-bs-toggle="modal" data-bs-target="#modal">Open modal</button>
+              <Modal
+                bodyText={'This is the modal container\'s body'}
+                headingText={'This is the modal container\'s heading'}
+                modalId={'modal'}
+              />
+            </div>
+            <hr />
+            <div>
+              <h2>Number Counter</h2>
+              <NumberCounter
+                countTime={'5000'}
+                targetNumber={300}
+              />
 
-        </main>
-      </div>
+            </div>
+            <hr />
+            <div>
+              <Parallax
+                contentObj={
+                  {
+                    bodyText: '',
+                    centerText: 'SCROLL DOWN',
+                    hasLightTextColor: true,
+                    headingText: '',
+                    heightInPx: '300',
+                    imageSrc: primaryParallax,
+                  }
+                }
+              />
+              <Parallax
+                contentObj={
+                  {
+                    bodyText: 'Height can be specified by adding heightInPx prop, such as heightInPx: 300',
+                    centerText: '',
+                    hasLightTextColor: false,
+                    headingText: 'Parallax Height',
+                    heightInPx: '300',
+                    imageSrc: lightParallax,
+                  }
+                }
+              />
+              <Parallax
+                contentObj={
+                  {
+                    bodyText: 'Make light text on dark backgrounds by changing the hasLightTextColor prop value to true',
+                    centerText: '',
+                    hasLightTextColor: true,
+                    headingText: 'Light text color',
+                    heightInPx: '300',
+                    imageSrc: sunsetParallax,
+                  }
+                }
+              />
+            </div>
+            <hr />
+            <div>
+              <h2>Progress Bar</h2>
+              <ProgressBar percentComplete={50} />
+            </div>
+            <hr />
+            <div>
+              <h2>Side Navigation</h2>
+              <h3>Single-Level List</h3>
+              <SingleLevelList
+                contentArr={[
+                  { isActive: true, isLanding: true, text: 'Landing page', href: '/' },
+                  { text: 'Page 1', href: '/' },
+                  { text: 'Page 2', href: '/' },
+                  { text: 'Page 3', href: '/' },
+                  { text: 'Page 4', href: '/' },
+                  { text: 'Page 5', href: '/' }
+                ]}
+              />
+              <h3>Multi-Level List</h3>
+              <MultiLevelList
+                contentArr={
+                  [
+                    { text: 'Page 1', href: '/' },
+                    { text: 'Page 2', href: '/' },
+                    { text: 'Page 3', href: '/' },
+                    {
+                      text: 'Page 4', href: '/', secondLevelArr: [
+                        { text: 'Page A', href: '/' },
+                        { isLanding: true, text: 'Page B Section Landing', href: '/' },
+                        { text: 'Page B-1', href: '/', isActive: true },
+                        { text: 'Page B-2', href: '/' },
+                      ]
+                    },
+                    { text: 'Page 5', href: '/' },
+                  ]
+                }
+              />
+              <h3>Accordion List</h3>
+              <NavigationAccordionList
+                contentArr={
+                  [
+                    { text: 'Page 1', href: '/' },
+                    {
+                      text: 'Page 2', href: '/', secondLevelArr: [
+                        { text: 'Page A', href: '/' },
+                        { text: 'Page B', href: '/' },
+                      ]
+                    },
+                    { text: 'Page 3', href: '/' },
+                    { text: 'Page 4', href: '/' },
+                    { text: 'Page 5', href: '/' },
+                  ]
+                }
+              />
+            </div>
+            <hr />
+            <div>
+              <h2>Social Media Icons</h2>
+              <SocialMediaIcons
+                contentArr={[
+                  {
+                    type: 'facebook',
+                    href: 'https://www.facebook.com/'
+                  },
+                  {
+                    type: 'github',
+                    href: 'https://www.github.com/'
+                  },
+                  {
+                    type: 'twitter',
+                    href: 'https://www.twitter.com/'
+                  },
+                  {
+                    type: 'youtube',
+                    href: 'https://www.youtube.com/'
+                  },
+                  {
+                    type: 'linkedin',
+                    href: 'https://www.linkedin.com/'
+                  },
+                  {
+                    type: 'instagram',
+                    href: 'https://www.instagram.com/'
+                  },
+                  {
+                    type: 'email',
+                    href: 'mailto:your_email@ca.gov'
+                  }
+                ]}
+              />
+            </div>
+            <br />
+            <hr />
+            <div>
+              <h2>Table</h2>
+              <h3>Basic</h3>
+              <Table
+                type={'default'}
+                headerArr={['#', 'First Name', 'Last Name', 'Username']}
+                rowArr={[['1', 'Mark', 'Otto', '@mdo'], ['2', 'Jacob', 'Thornton', '@jthornton'], ['3', 'Larry', 'the Bird', '@twitter']]}
+              />
+              <h3>Shaded</h3>
+              <Table
+                type={'shaded'}
+                headerArr={['#', 'First Name', 'Last Name', 'Username']}
+                rowArr={[['1', 'Mark', 'Otto', '@mdo'], ['2', 'Jacob', 'Thornton', '@jthornton'], ['3', 'Larry', 'the Bird', '@twitter']]}
+              />
+              <h3>Zebra</h3>
+              <Table
+                type={'zebra'}
+                headerArr={['#', 'First Name', 'Last Name', 'Username']}
+                rowArr={[['1', 'Mark', 'Otto', '@mdo'], ['2', 'Jacob', 'Thornton', '@jthornton'], ['3', 'Larry', 'the Bird', '@twitter']]}
+              />
+            </div>
+            <hr />
+            <div>
+              <h2>Tabs</h2>
+              <Tabs
+                headerArr={['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4']}
+                sectionArr={
+                  [
+                    { headline: 'Tab 1 headline', text: 'Tab 1 text' },
+                    { headline: 'Tab 2 headline', text: 'Tab 2 text' },
+                    { headline: 'Tab 3 headline', text: 'Tab 3 text' },
+                    { headline: 'Tab 4 headline', text: 'Tab 4 text' }
+                  ]
+                }
+              />
+            </div>
+            <hr />
+
+          </div >
+
+        </main >
+      </div >
     </>
   );
 }

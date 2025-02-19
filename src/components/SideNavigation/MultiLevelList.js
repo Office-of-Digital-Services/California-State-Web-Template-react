@@ -15,7 +15,7 @@ const MultiLevelList = ({ contentArr }) => {
   }
 
   return (
-    <nav aria-label={'list navigation'} className={'side-navigation'}>
+    <nav aria-label={'list navigation'}>
       <ul className="list-navigation">
 
         {contentArr.map((item, idx) => (
