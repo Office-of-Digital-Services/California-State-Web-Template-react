@@ -1,5 +1,5 @@
 import React from 'react';
-import headerBear from './header-bear.png';
+// import headerBear from './header-bear.png';
 
 const FullSpanBanner = ({ titleText, bodyText, buttonHref, buttonText, imageSrc }) => {
   return (
@@ -14,9 +14,9 @@ const FullSpanBanner = ({ titleText, bodyText, buttonHref, buttonText, imageSrc 
               <a href={buttonHref} className='btn btn-lg btn-highlight m-t'>{buttonText}</a>
             </div>
           </div>
-          <div className={'col-sm my-auto'}>
+          {/* <div className={'col-sm my-auto'}>
             <img src={headerBear} alt={''} width={'600px'} />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

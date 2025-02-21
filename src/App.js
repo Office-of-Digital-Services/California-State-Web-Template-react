@@ -3,7 +3,9 @@ import testAvatar from './components/Blockquote/blockquote-with-image.jpg';
 import primaryParallax from './components/Parallax/background-primary.jpg';
 import lightParallax from './components/Parallax/bg-open-data.jpg';
 import sunsetParallax from './components/Parallax/main-banner4.jpg';
-
+import bannerImage from './patterns/Banner/main-banner.svg';
+import featureBannerImage from './patterns/Banner/ocean.jpg';
+import basicCardImage from './patterns/Card/basic-card-image.jpg';
 
 // Components
 import Accordion from './components/Accordion/Accordion';
@@ -30,6 +32,10 @@ import NavigationAccordionList from './components/SideNavigation/NavigationAccor
 import SocialMediaIcons from './components/SocialMediaIcons/SocialMediaIcons';
 import Table from './components/Table/Table';
 import Tabs from './components/Tabs/Tabs';
+
+// Patterns
+import Banner from './patterns/Banner/Banner';
+import Card from './patterns/Card/Card';
 
 function App() {
 
@@ -526,7 +532,40 @@ function App() {
               />
             </div>
             <hr />
-
+            <h1>Patterns</h1>
+            <div>
+              <h2>Banner</h2>
+              <Banner
+                type={'fullspan'}
+                titleText={'Title'}
+                bodyText={'Highlight an action you want people to take or important information on the homepage.'}
+                buttonText={'Short link'}
+                imageSrc={bannerImage}
+                href={'/'}
+              />
+              <Banner
+                type={'feature'}
+                titleText={'Title'}
+                bodyText={'Highlight an action you want people to take or important information on the homepage.'}
+                buttonText={'Short link'}
+                imageSrc={featureBannerImage}
+                href={'/'}
+              />
+            </div>
+            <hr />
+            <div>
+              <h2>Card</h2>
+              <h3>Basic Card</h3>
+              <Card
+                titleText={'Give your card a short title'}
+                bodyText={'Card body text'}
+                imageSrc={basicCardImage}
+                altText={'Card size'}
+                buttonHref={'https://www.google.com'}
+                buttonText={'Go to Google'}
+                type={'image'}
+              />
+            </div>
           </div >
 
         </main >
