@@ -6,6 +6,10 @@ import sunsetParallax from './components/Parallax/main-banner4.jpg';
 import bannerImage from './patterns/Banner/main-banner.svg';
 import featureBannerImage from './patterns/Banner/ocean.jpg';
 import basicCardImage from './patterns/Card/basic-card-image.jpg';
+import sunflowerImage1 from './patterns/CardGrid/sunflower1.jpg';
+import sunflowerImage2 from './patterns/CardGrid/sunflower2.jpg';
+import sunflowerImage3 from './patterns/CardGrid/sunflower3.jpg';
+
 
 // Components
 import Accordion from './components/Accordion/Accordion';
@@ -36,6 +40,13 @@ import Tabs from './components/Tabs/Tabs';
 // Patterns
 import Banner from './patterns/Banner/Banner';
 import Card from './patterns/Card/Card';
+import CardGrid from './patterns/CardGrid/CardGrid';
+import LinkGrid from './patterns/LinkGrid/LinkGrid';
+import ProgressTracker from './patterns/ProgressTracker/ProgressTracker';
+
+// CSS Shortcuts
+import GradientBackgrounds from './get-started/GradientBackgrounds/GradientBackgrounds';
+import TextAccentColors from './get-started/TextAccentColors/TextAccentColors';
 
 function App() {
 
@@ -532,7 +543,7 @@ function App() {
               />
             </div>
             <hr />
-            <h1>Patterns</h1>
+            <h1 id={'patterns'}>Patterns</h1>
             <div>
               <h2>Banner</h2>
               <Banner
@@ -553,17 +564,545 @@ function App() {
               />
             </div>
             <hr />
-            <div>
+            <div className={'col-md-2'}>
               <h2>Card</h2>
-              <h3>Basic Card</h3>
+              <h3>Default Card</h3>
               <Card
                 titleText={'Give your card a short title'}
-                bodyText={'Card body text'}
+                bodyText={'Use this space to briefly tell your reader what they will find at the card\'s destination'}
+                imageSrc={basicCardImage}
+                altText={'Card size'}
+                buttonHref={'https://www.google.com'}
+                buttonText={'Go to Google'}
+              />
+              <h3>Icon Card</h3>
+              <Card
+                titleText={'Give your card a short title'}
+                bodyText={'Use this space to briefly tell your reader what they will find at the card\'s destination'}
+                imageSrc={basicCardImage}
+                altText={'Card size'}
+                buttonHref={'https://www.google.com'}
+                buttonText={'Go to Google'}
+                type={'icon'}
+                icon={'ca-gov-icon-clipboard'}
+              />
+              <h3>Image Card</h3>
+              <Card
+                titleText={'Give your card a short title'}
+                bodyText={'Use this space to briefly tell your reader what they will find at the card\'s destination'}
                 imageSrc={basicCardImage}
                 altText={'Card size'}
                 buttonHref={'https://www.google.com'}
                 buttonText={'Go to Google'}
                 type={'image'}
+              />
+            </div>
+            <hr />
+            <div>
+              <h2>Card Grid</h2>
+              <h3>3 cards</h3>
+              <CardGrid
+                contentArr={
+                  [
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                  ]
+                }
+              />
+              <h3>4 cards</h3>
+              <CardGrid
+                contentArr={
+                  [
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                  ]
+                }
+              />
+              <h3>5 cards</h3>
+              <CardGrid
+                contentArr={
+                  [
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                  ]
+                }
+              />
+              <h3>6 cards</h3>
+              <CardGrid
+                contentArr={
+                  [
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                  ]
+                }
+              />
+              <h3>7 cards</h3>
+              <CardGrid
+                contentArr={
+                  [
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Give your card a short title',
+                      bodyText: 'Use this space to briefly tell your reader what they will find at the card\'s destination',
+                      imageSrc: basicCardImage,
+                      altText: 'Card size',
+                      buttonHref: 'https://www.google.com',
+                      buttonText: 'Go to Google',
+                      type: 'image'
+                    },
+                  ]
+                }
+              />
+              <CardGrid
+                contentArr={
+                  [
+                    {
+                      titleText: 'Infographic',
+                      bodyText: 'Commonly recognized by visitors and generally reserved for data-rich visualization.',
+                      buttonHref: '#',
+                      type: 'icon',
+                      icon: 'ca-gov-icon-clipboard',
+                    },
+                    {
+                      titleText: 'Icons',
+                      bodyText: 'Should be simple and maintain the likeness of the object it represents.',
+                      buttonHref: '#',
+                      type: 'icon',
+                      icon: 'ca-gov-icon-accessibility',
+                    },
+                    {
+                      titleText: 'Card body',
+                      bodyText: 'This space should quickly describe what visitors will find at the button link.',
+                      buttonHref: '#',
+                      type: 'icon',
+                      icon: 'ca-gov-icon-calendar',
+                    },
+                  ]
+                }
+              />
+              <CardGrid
+                contentArr={
+                  [
+                    {
+                      titleText: 'Card title',
+                      bodyText: 'Briefly tell your reader what they will find at the card\'s destination then link to that location.',
+                      imageSrc: sunflowerImage1,
+                      altText: 'Close up of sunflower',
+                      buttonHref: '#',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Card title',
+                      bodyText: 'Briefly tell your reader what they will find at the card\'s destination then link to that location.',
+                      imageSrc: sunflowerImage2,
+                      altText: 'Close up of sunflower',
+                      buttonHref: '#',
+                      type: 'image'
+                    },
+                    {
+                      titleText: 'Card title',
+                      bodyText: 'Briefly tell your reader what they will find at the card\'s destination then link to that location.',
+                      imageSrc: sunflowerImage3,
+                      altText: 'Close up of sunflower',
+                      buttonHref: '#',
+                      type: 'image'
+                    },
+                  ]
+                }
+              />
+            </div>
+            <hr />
+            <div>
+              <h3>Link Grid</h3>
+              <LinkGrid
+                linkArr={
+                  [
+                    { href: '#', linkText: 'Short link 1' },
+                    { href: '#', linkText: 'Short link 2' },
+                    { href: '#', linkText: 'Short link 3' }
+                  ]
+                }
+              />
+            </div>
+            <hr />
+            <div>
+              <h2>Progress Tracker</h2>
+              <ProgressTracker
+                type={'horizontal'}
+                currentStep={3}
+                contentArr={
+                  [
+                    {
+                      title: 'Step 1',
+                      body: 'Briefly discuss the step or identify the milestone.',
+                    },
+                    {
+                      title: 'Step 2',
+                      body: 'Keep the message clear and concise.',
+                    },
+                    {
+                      title: 'Step 3',
+                      body: 'Do not link to more information from the tracker.',
+                    },
+                    {
+                      title: 'Step 4',
+                      body: 'Instead, link to additional information in your body content or tracker caption.',
+                    },
+                  ]
+                }
+              />
+              <ProgressTracker
+                type={'vertical'}
+                contentArr={
+                  [
+                    {
+                      title: 'Step 1 Contributor',
+                      body: 'Briefly discuss the step or identify the milestone.',
+                      date: 'YY - YY'
+                    },
+                    {
+                      title: 'Step 2 Contributor',
+                      body: 'Keep the message clear and concise.',
+                      date: 'YY - YY'
+
+                    },
+                    {
+                      title: 'Step 3 Contributor',
+                      body: 'Do not link to more information from the tracker.',
+                      date: 'YY - YY'
+
+                    },
+                    {
+                      title: 'Step 4 Contributor',
+                      body: 'Instead, link to additional information in your body content or tracker caption.',
+                      date: 'YY - YY'
+
+                    },
+                  ]
+                }
+              />
+              <ProgressTracker
+                type={'step'}
+                contentArr={
+                  [
+                    {
+                      title: 'Give your steps a clear, concise title',
+                      body: 'The step list is a good fit for lengthy content. Use this space to discuss the step or identify the milestone. If there is information that your visitor must know before completing this step, you can talk about that here too.',
+                    },
+                    {
+                      title: 'Make your steps actionable',
+                      body: 'Be sure to tell your visitor exactly what they have to do to complete the step. If the process is not fully fleshed out, then this component may not be the best fit for your content.',
+                    },
+                    {
+                      title: 'Conclude the process',
+                      body: 'All good things must come to an end. Tell your reader how to complete their task. If needed, you can link to additional information in the step list content.',
+                    },
+                  ]
+                }
+              />
+            </div>
+            <hr />
+            <div id={'css-shortcuts'}>
+              <h2>CSS Shortcuts</h2>
+              <h3>Gradient Backgrounds</h3>
+              <div>
+                <div style={{ display: 'flex' }}>
+                  <GradientBackgrounds
+                    type={'primary'}
+                  />
+                  <GradientBackgrounds
+                    type={'highlight'}
+                  />
+                  <GradientBackgrounds
+                    type={'standout'}
+                  />
+                  <GradientBackgrounds
+                    type={'secondary'}
+                  />
+                </div>
+                <div style={{ display: 'flex' }}>
+                  <GradientBackgrounds
+                    type={'primary-standout'}
+                  />
+                  <GradientBackgrounds
+                    type={'primary-highlight'}
+                  />
+                  <GradientBackgrounds
+                    type={'primary-secondary'}
+                  />
+                  <GradientBackgrounds
+                    type={'standout-highlight'}
+                  />
+                </div>
+                <div style={{ display: 'flex' }}>
+                  <GradientBackgrounds
+                    type={'danger-warning'}
+                  />
+                  <GradientBackgrounds
+                    type={'info-success'}
+                  />
+                  <GradientBackgrounds
+                    type={'radial-gray'}
+                  />
+                  <GradientBackgrounds
+                    type={'radial-gray-light'}
+                  />
+                </div>
+                <div style={{ display: 'flex' }}>
+                  <GradientBackgrounds
+                    type={'radial-primary'}
+                  />
+                  <GradientBackgrounds
+                    type={'radial-highlight'}
+                  />
+                  <GradientBackgrounds
+                    type={'radial-standout'}
+                  />
+                  <GradientBackgrounds
+                    type={'radial-secondary'}
+                  />
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <h3>Text Accent Colors</h3>
+              <TextAccentColors
+                accentClass={'text-accent1'}
+                text={'Hello world'}
+                htmlTag={'p'}
+              />
+              <TextAccentColors
+                accentClass={'text-accent2'}
+                text={'Hello world'}
+                htmlTag={'p'}
+              />
+              <TextAccentColors
+                accentClass={'text-accent3'}
+                text={'Hello world'}
+                htmlTag={'p'}
+              />
+              <TextAccentColors
+                accentClass={'text-accent9 bg-dark'}
+                text={'Hello world'}
+                htmlTag={'p'}
+              />
+              <TextAccentColors
+                accentClass={'text-accent-p1 bg-dark'}
+                text={'Hello world'}
+                htmlTag={'p'}
+              />
+              <TextAccentColors
+                accentClass={'text-accent-s1 bg-dark'}
+                text={'Hello world'}
+                htmlTag={'p'}
               />
             </div>
           </div >

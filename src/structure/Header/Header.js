@@ -48,20 +48,11 @@ const Header = () => (
         <ActiveSearch />
       </div>
       <SiteNavigation
-        type={'dropdown'}
+        type={'single'}
         contentArr={[
-          { href: '#', navHeader: 'Nav Link 1' },
-          { href: '#', navHeader: 'Nav Link 2' },
-          {
-            navHeader: 'Nav Link 3',
-            navBodyArr: [
-              // Using # as the href in a second-level-link will add the .bold class to the title
-              { title: 'Dropdown Link 3-1', href: '/second-level-link' },
-              { title: 'Dropdown Link 3-2', href: '/second-level-link' },
-              { title: 'Dropdown Link 3-3', href: '/second-level-link' }
-            ]
-          },
-          { href: '#', navHeader: 'Nav Link 4' },
+          { href: '#components', navHeader: 'Components' },
+          { href: '#patterns', navHeader: 'Patterns' },
+          { href: '#css-shortcuts', navHeader: 'CSS Shortcuts' },
         ]}
       />
     </div>
