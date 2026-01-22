@@ -1,31 +1,37 @@
-import React from 'react'
+import React from "react";
 
 /**
  * @summary This search is directly under the main menu in a prominent container. It's size and location means the website is intentionally showcasing search as a top task.
- * @see https://template.webstandards.ca.gov/structure/search.html#Featured-search
- * 
+ * @see https://template.webstandards.ca.gov/components/featured-search.html
+ *
  * @example
  * <FeaturedSearch />
- * 
+ *
  * @returns {React.ReactElement} Returns the FeaturedSearch structure element.
  */
 
 const FeaturedSearch = () => (
   <div className="container">
-    <form id="Search" className="pos-rel" action="/serp.html">
-      <span className="sr-only" id="SearchInput">Custom Google Search</span>
-      <input type="search" name="q" aria-labelledby="SearchInput" placeholder="Search" className="search-textfield" />
-      <button type="submit" className="gsc-search-button">
-        <span className="ca-gov-icon-search" aria-hidden="true"></span>
-        <span className="sr-only">Submit</span>
+    <form class="pos-rel d-flex" action="/serp.html">
+      <span class="sr-only" id="SearchInput">
+        Custom Google Search
+      </span>
+      <input
+        type="search"
+        name="q"
+        aria-labelledby="SearchInput"
+        placeholder="Search"
+        class="font-size-20 pt-3 pb-3 ps-3 w-100 border-end-0 rounded-start brd-primary border border-2 outline-offset-5"
+      />
+      <button
+        type="submit"
+        class="bg-white border-start-0 rounded-end brd-primary border border-2 outline-offset-5 font-size-30 ps-3 pe-3 bg-gray-50-hover gray-900 color-black-hover"
+      >
+        <span class="ca-gov-icon-search" aria-hidden="true"></span>
+        <span class="sr-only">Submit</span>
       </button>
-      <div className="close-search-btn">
-        <button className="close-search gsc-clear-button border-0 bg-transparent pos-rel" type="reset">
-          <span className="sr-only">Close</span>
-        </button>
-      </div>
     </form>
   </div>
-)
+);
 
-export default FeaturedSearch
+export default FeaturedSearch;
